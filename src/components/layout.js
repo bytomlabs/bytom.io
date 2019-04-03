@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import css from 'styled-components';
 import Header from './header';
+import Footer from './footer';
 import './layout.css';
 import '../static/font/iconfont.css';
 
@@ -17,6 +18,7 @@ const Layout = ({ children }) => (
     <Wrap>
       {children}
     </Wrap>
+    <Footer />
   </>
 )
 
@@ -24,4 +26,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default Layout;

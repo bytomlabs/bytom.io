@@ -67,7 +67,7 @@ const Header = ({ siteTitle }) => (
       <Nav>
         <NavItem><Link to="/">Developer</Link></NavItem>
         <NavItem><Link to="/">Ecosystem</Link></NavItem>
-        <NavItem><Link to="/">Wallet</Link></NavItem>
+        <NavItem><Link to="/wallet/">Wallet</Link></NavItem>
       </Nav>
       <Toolbar>
         <Github className="iconfont github" />
