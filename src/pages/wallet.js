@@ -22,6 +22,8 @@ import img_bepal from '../images/wallet/mobile/wallet-bepal@2x.png';
 import img_hoo from '../images/wallet/mobile/wallet-hoo@2x.png';
 import img_hyperpay from '../images/wallet/mobile/wallet-hyperpay@2x.png';
 import img_bitpie from '../images/wallet/mobile/wallet-bitpie@2x.png';
+import img_bystore from '../images/wallet/mobile/extension-bystore@2x.png';
+import img_bepa from '../images/wallet/mobile/wallet-bepapros@2x.png';
 
 const mobileWalletList = [
   {
@@ -53,6 +55,21 @@ const mobileWalletList = [
     img: img_bitpie,
     title: 'Bitpie Wallet',
     des: 'Industry-leading multi-blockchain wallet'
+  },
+];
+
+const browserWalletList = [
+  {
+    img: img_bystore,
+    title: 'Bystore',
+    des: 'Secure & Advanced Bytom Client'
+  },
+];
+const hardwareWalletList = [
+  {
+    img: img_bepa,
+    title: 'Bepa Pro S',
+    des: 'Focusing on the safety of blockchain'
   },
 ];
 
@@ -344,11 +361,23 @@ const WalletPage = () => (
               ))
             }
           </CardWrap>
-          <div>2</div>
-          <div>3</div>
+          <CardWrap>
+            {
+              browserWalletList.map((item, index) => (
+                <Card key={index} {...item} />
+              ))
+            }
+          </CardWrap>
+          <CardWrap>
+            {
+              hardwareWalletList.map((item, index) => (
+                <Card key={index} {...item} />
+              ))
+            }
+          </CardWrap>
         </Tabs>
     </Wrap>
   </Layout>
 )
 
-export default WalletPage
+export default WalletPage;
