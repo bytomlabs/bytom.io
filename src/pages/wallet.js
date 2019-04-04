@@ -7,6 +7,7 @@ import SEO from '../components/seo';
 import Banner from '../components/Banner';
 import Tables from '../components/Table';
 import Tabs from '../components/Tabs';
+import Card from '../components/Card';
 
 import img_banner from '../images/wallet/banner.png';
 import img_desktop from '../images/wallet/desktop.png';
@@ -14,6 +15,46 @@ import img_bg from '../images/wallet/bg.png';
 import img_logo from '../images/wallet/logo.png';
 import img_step from '../images/wallet/step.png';
 import img_sub_banner from '../images/wallet/bannerWallet.png';
+
+import img_bycoin from '../images/wallet/mobile/wallet-bycoin@2x.png';
+import img_bixin from '../images/wallet/mobile/wallet-bixin@2x.png';
+import img_bepal from '../images/wallet/mobile/wallet-bepal@2x.png';
+import img_hoo from '../images/wallet/mobile/wallet-hoo@2x.png';
+import img_hyperpay from '../images/wallet/mobile/wallet-hyperpay@2x.png';
+import img_bitpie from '../images/wallet/mobile/wallet-bitpie@2x.png';
+
+const mobileWalletList = [
+  {
+    img: img_bycoin,
+    title: 'Bycoin Wallet',
+    des: 'Professional digital assets management platform'
+  },
+  {
+    img: img_bixin,
+    title: 'Binxin Wallet',
+    des: 'Blockchain in your pocket'
+  },
+  {
+    img: img_bepal,
+    title: 'Bepal Wallet',
+    des: 'Safe and easy to use with attractive interface'
+  },
+  {
+    img: img_hoo,
+    title: 'Hoo Wallet',
+    des: ''
+  },
+  {
+    img: img_hyperpay,
+    title: 'Hyperpay Wallet',
+    des: 'The bastion of wallet security, watch your assets…'
+  },
+  {
+    img: img_bitpie,
+    title: 'Bitpie Wallet',
+    des: 'Industry-leading multi-blockchain wallet'
+  },
+];
 
 const walletList = [
   {
@@ -23,7 +64,7 @@ const walletList = [
     version: 'V 1.0.8',
     links: [
       null,
-      {title: 'Download', href: ''}
+      {title: 'Download', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-mac.zip'}
     ]
   },
   {
@@ -32,8 +73,8 @@ const walletList = [
     des: 'for Wins',
     version: 'V 1.0.8',
     links: [
-      {title: 'Win32', href: ''},
-      {title: 'Win64', href: ''},
+      {title: 'Win32', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-win-ia32.zip'},
+      {title: 'Win64', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-win-x64.zip'},
     ]
   },
   {
@@ -42,8 +83,8 @@ const walletList = [
     des: 'for Linux',
     version: 'V 1.0.8',
     links: [
-      {title: 'Linux32', href: ''},
-      {title: 'Linux64', href: ''},
+      {title: 'Linux32', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-linux-ia32.zip'},
+      {title: 'Linux64', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-linux-x64.zip'},
     ]
   },
   {
@@ -52,26 +93,26 @@ const walletList = [
     des: '',
     version: '',
     links: [
-      {title: 'zip', href: ''},
-      {title: 'tar.gz', href: ''},
+      {title: 'zip', href: 'https://github.com/Bytom/bytom/archive/v1.0.8.zip'},
+      {title: 'tar.gz', href: 'https://github.com/Bytom/bytom/archive/v1.0.8.tar.gz'},
     ]
   },
 ]
 const historyVersions = {
   title: ['Versions', 'Files', 'Checksums(MD5)'],
   data: [
-    ['Bytom Wallet for macOS v1.0.1', 'bytom-1.0.1-windows_386.zip', 'd92422537fb52ddfdd1470adc067acd5'],
-    ['Bytom Wallet for macOS v1.0.1', 'bytom-1.0.1-windows_386.zip', 'd92422537fb52ddfdd1470adc067acd5'],
-    ['Bytom Wallet for macOS v1.0.1', 'bytom-1.0.1-windows_386.zip', 'd92422537fb52ddfdd1470adc067acd5'],
-    ['Bytom Wallet for macOS v1.0.1', 'bytom-1.0.1-windows_386.zip', 'd92422537fb52ddfdd1470adc067acd5'],
-    ['Bytom Wallet for macOS v1.0.1', 'bytom-1.0.1-windows_386.zip', 'd92422537fb52ddfdd1470adc067acd5'],
+    ['Bytom Wallet for macOS v1.0.8', 'bytom-wallet-desktop-1.0.8-mac.zip', '08a4ac6290df4659080d38f32d6f46ee'],
+    ['Bytom Wallet for Win 32 v1.0.8', 'bytom-wallet-desktop-1.0.8-win-ia32.zip	', '57d4b1c054c2245ed8f071571fc8d211'],
+    ['Bytom Wallet for Win 64 v1.0.8', 'bytom-wallet-desktop-1.0.8-win-x64.zip', 'd7667979801821e4dbfa475f66d0ac49'],
+    ['Bytom Wallet for Linux 32 v1.0.8', 'bytom-wallet-desktop-1.0.8-linux-ia32.zip', '5a4ed58a6ec1a5c586012f6ac3ac5dab'],
+    ['Bytom Wallet for Linux 64 v1.0.8', 'bytom-wallet-desktop-1.0.8-linux-x64.zip', '202bbe81a2896d74c70267e292a91f72'],
   ],
-  footer: <a href="More versions">More versions &gt;&gt;</a>
+  footer: <a href="https://github.com/Bytom/bytom/releases">More versions &gt;&gt;</a>
 };
 const fileList = {
   title: ['File', 'Height', 'Size', 'Checksums(MD5)', 'Last update', 'Link'],
   data: [
-    ['122345-Update.zip', '12345', '175.87 MB', 'b04adb6bbf5034c2f4ec3c49250009f9', '2018-05-01 05:56:47 (GMT+8)', <a href="/">Download</a>],
+    ['190228-Update.db.zip', '188516', '349.02 MB', '1B83A19E97D65EF8BDEA490F2364780F', '2018-05-01 05:56:47 (GMT+8)', <a href="http://p853yonds.bkt.clouddn.com/190228-Update.db.zip">Download</a>],
   ],
 };
 
@@ -218,6 +259,14 @@ const SubBanner = css.div`
   height: 280px;
   margin-top: 76px;
 `;
+const CardWrap = css.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &>div{
+    margin-top: 40px;
+  }
+`;
 
 const WalletPage = () => (
   <Layout>
@@ -288,7 +337,13 @@ const WalletPage = () => (
             ]
           }
         >
-          <div>1</div>
+          <CardWrap>
+            {
+              mobileWalletList.map((item, index) => (
+                <Card key={index} {...item} />
+              ))
+            }
+          </CardWrap>
           <div>2</div>
           <div>3</div>
         </Tabs>

@@ -6,8 +6,8 @@ const links = [
   {
     title: 'Links',
     list: [
-      {title: 'Wallet', href: '/'},
-      {title: 'Explorer', href: '/'},
+      {title: 'Wallet', href: '/wallet'},
+      {title: 'Explorer', href: 'http://blockmeta.com/'},
       {title: 'Blog', href: '/'},
       {title: 'Forum', href: '/'},
     ]
@@ -34,7 +34,7 @@ const links = [
     title: 'Contact',
     list: [
       {title: 'E-Mail: contact@bytom.io'},
-      {title: 'Website: bytom.io:', href: 'https://bytom.io'},
+      {title: 'Website: bytom.io', href: 'https://bytom.io'},
     ]
   },
 ];
@@ -124,7 +124,7 @@ const Footer = ({ siteTitle }) => (
                 {
                   item.list.map((sitem, sindex) => (
                     <li key={sindex}>
-                      <Link to={sitem.href || '/'}>{sitem.title}</Link>
+                      <a href={sitem.href || '/'}>{sitem.title}</a>
                     </li>
                   ))
                 }
@@ -139,12 +139,12 @@ const Footer = ({ siteTitle }) => (
             <button>Subscribe</button>
           </Follow>
           <IconList>
-            <li><a href="/"><i className="iconfont twitter"></i></a></li>
-            <li><a href="/"><i className="iconfont wechat"></i></a></li>
-            <li><a href="/"><i className="iconfont weibo"></i></a></li>
-            <li><a href="/"><i className="iconfont facebook"></i></a></li>
-            <li><a href="/"><i className="iconfont discord"></i></a></li>
-            <li><a href="/"><i className="iconfont telegram"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/Bytom_Official"><i className="iconfont twitter"></i></a></li>
+            <li><a target="_blank" href="https://mp.weixin.qq.com/s/fLCk33KYQTouevEAi0a0Kg"><i className="iconfont wechat"></i></a></li>
+            <li><a target="_blank" href="https://weibo.com/u/5966947038?refer_flag=1001030101_"><i className="iconfont weibo"></i></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/bytomofficial/"><i className="iconfont facebook"></i></a></li>
+            <li><a target="_blank" href="https://discord.gg/U3RSYr5"><i className="iconfont discord"></i></a></li>
+            <li><a target="_blank" href="https://t.me/BytomInternational"><i className="iconfont telegram"></i></a></li>
           </IconList>
         </Item>
       </Cont>
