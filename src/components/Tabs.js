@@ -17,16 +17,20 @@ const Head = css.ul`
   height: 72px;
   background-color: #fff;
   line-height: 72px;
-  li{
-    float: left;
-    margin-right: 20px;
-    color: #000;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    i{
-      margin-right: 8px;
-    }
+`;
+const Item = css.li`
+  float: left;
+  margin-right: 20px;
+  padding: 0 20px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom: ${(props) => props.isCur ? '3px ' : '0'} solid #035BD4;
+  height: 72px;
+  box-sizing: border-box;
+  i{
+    margin-right: 8px;
   }
 `;
 export default function ({ tab, children }) {
@@ -37,7 +41,7 @@ export default function ({ tab, children }) {
         <Wrap>
           {
             tab.map((item, index) => (
-              <li onClick={() => changeTabs(index)} key={index}>{item}</li>
+              <Item isCur={index === +curTabs} onClick={() => changeTabs(index)} key={index}>{item}</Item>
             ))
           }
         </Wrap>
