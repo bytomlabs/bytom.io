@@ -1,10 +1,21 @@
+@font-face{
+  font-family: 'Roboto';
+  src: url('../static/font/Roboto-Regular.ttf') format('truetype'), url('../static/font/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+}
+@font-face{
+  font-family: 'Roboto';
+  src: url('../static/font/Roboto-Bold.ttf') format('truetype'), url('../static/font/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
-  font-size: 14px
+  font-size: 14px;
+  font-family: 'Roboto';
 }
 
 blockquote,body,dd,dl,fieldset,h1,h2,h3,h4,h5,h6,ol,p,pre,ul {
