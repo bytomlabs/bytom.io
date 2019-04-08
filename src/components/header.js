@@ -65,7 +65,7 @@ const Header = ({ siteTitle }) => (
     <Cont className="clearfix">
       <Logo to="/" />
       <Nav>
-        <NavItem><Link to="/">Developer</Link></NavItem>
+        <NavItem><Link to="/dev/">Developer</Link></NavItem>
         <NavItem><Link to="/">Ecosystem</Link></NavItem>
         <NavItem><Link to="/wallet/">Wallet</Link></NavItem>
       </Nav>

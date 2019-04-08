@@ -277,6 +277,8 @@ const SubBanner = css.div`
   margin-top: 76px;
 `;
 const CardWrap = css.div`
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
