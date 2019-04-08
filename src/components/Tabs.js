@@ -7,8 +7,6 @@ const Wrap = css.div`
   margin: 0 auto;
 `;
 const Cont = css.div`
-  max-width: 1280px;
-  height: 100%;
   margin: 0 auto;
   background-color: #f8f8f8;
 `;
@@ -47,9 +45,7 @@ export default function ({ tab, children }) {
         </Wrap>
       </Head>
       <Cont>
-        <Wrap>
-          {children[curTabs]}
-        </Wrap>
+        {children[curTabs]}
       </Cont>
     </>
   )
