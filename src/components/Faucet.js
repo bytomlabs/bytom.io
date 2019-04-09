@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import css from 'styled-components';
+import ajax from 'axios';
 
 
 const Wrap = css.div`
@@ -30,7 +31,9 @@ const Wrap = css.div`
     width: 100%;
     color: #fff;
     font-size: 16px;
+    cursor: pointer;
     font-weight: bold;
+    outline: none;
     background: linear-gradient(90deg,rgba(3,91,212,1) 0%,rgba(62,143,255,1) 100%);
   }
   p{
@@ -43,7 +46,7 @@ const Wrap = css.div`
 const ErrMsg = css.span`
   font-size: 12px;
   line-height: 20px;
-  color: #E21919;
+  color: ${props => props.success ? '#38b571' : '#E21919'};
   margin-top: -20px;
   display: inline-block;
   position: absolute;
@@ -51,17 +54,34 @@ const ErrMsg = css.span`
 `;
 
 export default function Faucet() {
+  const [result, handleGetBtm] = useState(0);
+  const [address, setAddress] = useState('');
+  const getBtm = async () => {
+    if(!address){
+      handleGetBtm(2);
+      return;
+    }
+    try {
+      const data = await ajax.post('https://kit.blockmeta.com/api/v1/get_testnet_coins', { receiver_str: address });
+      if(data.data.tx_id){
+        handleGetBtm(1)
+      }
+    } catch (error) {
+      handleGetBtm(2);
+    }
+  }
   return (
     <Wrap>
       <h2>Wallet Address</h2>
-      <input type="text"/>
-      <ErrMsg>* Please input correct Bytom testnet address.</ErrMsg>
-      <button>Get testnet 10 BTM for free</button>
+      <input placeholder="Bytom Testnet Wallet Address..." onChange={e => setAddress(e.target.value)} type="text"/>
+      {result === 2 && <ErrMsg>* Please input correct Bytom testnet address.</ErrMsg>}
+      {result === 1 && <ErrMsg success>* Successed.</ErrMsg>}
+      <button onClick={getBtm}>Get testnet 10 BTM for free</button>
       <p>
         Please input testnet address which is start from ‘tm’, here is Bytom Wallet official
-        <a href="">download</a>
+        <a href=""> download </a>
         and
-        <a href="">instruction</a>
+        <a href=""> instruction </a>
       </p>
     </Wrap>
   )
