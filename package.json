@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "author": "@bytom",
   "dependencies": {
+    "axios": "^0.18.0",
     "core-js": "2.x",
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
