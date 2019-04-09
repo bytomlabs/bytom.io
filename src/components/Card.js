@@ -5,6 +5,13 @@ const Wrap = css.div`
   width: 392px;
   height: auto;
   background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.04);
+  cursor: pointer;
+  &:hover{
+    box-shadow: 0px 2px 12px rgba(0,0,0,0.12);
+    transition: all 0.3s;
+    transform: translateY(-2px);
+  }
   img{
     width: 100%;
     height: 168px;
@@ -25,6 +32,7 @@ const Wrap = css.div`
     color: #B3B3B3;
     padding: 0 20px;
     height: 16px;
+    padding-bottom: 18px;
   }
 `;
 
