@@ -8,17 +8,17 @@ const links = [
     list: [
       {title: 'Wallet', href: '/wallet'},
       {title: 'Explorer', href: 'http://blockmeta.com/'},
-      {title: 'Blog', href: '/'},
-      {title: 'Forum', href: '/'},
+      {title: 'Blog', href: '/blog/'},
+      {title: 'Forum', href: 'https://forum.bytom.io/'},
     ]
   },
   {
     title: 'Developer',
     list: [
-      {title: 'GitHub', href: '/'},
-      {title: 'Wiki', href: '/'},
-      {title: 'Tools', href: '/'},
-      {title: 'Bounty', href: '/'},
+      {title: 'GitHub', href: 'https://github.com/Bytom/'},
+      {title: 'Wiki', href: 'https://docs.bytom.io/'},
+      {title: 'Tools', href: '/dev/'},
+      {title: 'Bounty', href: '/bounty/'},
     ]
   },
   {
@@ -26,7 +26,7 @@ const links = [
     list: [
       {title: 'About', href: '/'},
       {title: 'Team', href: '/'},
-      {title: 'Ecosystem', href: '/'},
+      {title: 'Ecosystem', href: '/ecosystem'},
       {title: 'Join', href: '/'},
     ]
   },

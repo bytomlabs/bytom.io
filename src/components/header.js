@@ -66,7 +66,7 @@ const Header = ({ siteTitle }) => (
       <Logo to="/" />
       <Nav>
         <NavItem><Link to="/dev/">Developer</Link></NavItem>
-        <NavItem><Link to="/">Ecosystem</Link></NavItem>
+        {/* <NavItem><Link to="/">Ecosystem</Link></NavItem> */}
         <NavItem><Link to="/wallet/">Wallet</Link></NavItem>
       </Nav>
       <Toolbar>

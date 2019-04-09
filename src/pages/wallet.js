@@ -278,6 +278,7 @@ const SubBanner = css.div`
 `;
 const CardWrap = css.div`
   max-width: 1280px;
+  height: 598px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -366,14 +367,14 @@ const WalletPage = () => (
           <CardWrap>
             {
               browserWalletList.map((item, index) => (
-                <Card key={index} {...item} />
+                <Card style={{ height: 259 }} key={index} {...item} />
               ))
             }
           </CardWrap>
           <CardWrap>
             {
               hardwareWalletList.map((item, index) => (
-                <Card key={index} {...item} />
+                <Card style={{ height: 259 }} key={index} {...item} />
               ))
             }
           </CardWrap>
