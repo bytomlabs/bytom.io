@@ -19,6 +19,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.5",
     "react-helmet": "^5.2.0",
+    "react-scroll": "^1.7.11",
     "styled-components": "^4.2.0"
   },
   "license": "MIT",
@@ -26,6 +27,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
+    "dev-m": "gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },

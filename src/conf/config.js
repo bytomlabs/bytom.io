@@ -8,6 +8,10 @@ export default {
       name: 'Wallet',
       href: '/wallet',
     },
+    {
+      name: 'Ecosystem',
+      href: '/ecosystem',
+    },
   ],
   subNav: {
     links: [

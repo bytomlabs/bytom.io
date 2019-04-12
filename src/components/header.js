@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import css from 'styled-components';
-
+import confData from '../conf/config';
 import img_logo from '../images/logo.png';
 
 const Wrap = css.div`
@@ -37,6 +37,9 @@ const NavItem = css.ul`
     &:hover{
       color: #035BD4;
     }
+    &.active{
+      color: #035BD4;
+    }
   }
 `;
 const Toolbar = css.div`
@@ -65,9 +68,11 @@ const Header = ({ siteTitle }) => (
     <Cont className="clearfix">
       <Logo to="/" />
       <Nav>
-        <NavItem><Link to="/dev/">Developer</Link></NavItem>
-        {/* <NavItem><Link to="/">Ecosystem</Link></NavItem> */}
-        <NavItem><Link to="/wallet/">Wallet</Link></NavItem>
+        {confData.nav.map((item,index) => {
+          return (
+            <NavItem key={index}><Link to={item.href} activeClassName="active">{item.name}</Link></NavItem>
+          )
+        })}
       </Nav>
       <Toolbar>
         <Github className="iconfont github" />
