@@ -1,46 +1,94 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import css from 'styled-components';
+
+import Card from '../components/Card';
+import _conf from '../conf/config';
+import ajax from 'axios';
 
 
 const Wrap = css.div`
   width: 100%;
-  height: 320px;
   box-sizing: border-box;
-  background: linear-gradient(90deg,rgba(3,91,212,1) 0%,rgba(62,143,255,1) 100%);
 `;
 const Cont = css.div`
   max-width: 1280px;
-  height: 100%;
   margin: 0 auto;
-  padding: 40px 0;
-  text-align: center;
-  h1{
-    color: #fff;
-    line-height: 66px;
-    font-size: 36px;
+  padding: 60px 0 80px;
+  &>h1{
+    color: #000;
+    font-size: 28px;
     font-weight: bold;
+    a{
+      font-size: 16px;
+      color: #035BD4;
+      float: right;
+    }
   }
 `;
-const Button = css(Link)`
-  margin-top: 40px;
-  width: 244px;
-  height: 48px;
-  background-color: #fff;
-  line-height: 48px;
-  font-size: 16px;
+const Loading = css.div`
+  width: 100%;
+  height: 550px;
   text-align: center;
-  color: #035BD4;
-  font-weight: bold;
-  display: inline-block;
+  line-height: 550px;
+  &:after{
+    content: 'loading';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
 `;
-const Trends = () => (
-  <Wrap>
-    <Cont>
-      <h1>Transfer Assets from <br/> Atomic World to Byteworld</h1>
-      <Button to="/dev">Become a developer</Button>
-    </Cont>
-  </Wrap>
-);
+const CardWrap = css.div`
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &>div{
+    margin-top: 40px;
+  }
+`;
+const More = css.div`
+  text-align: right;
+  padding: 20px 0 80px;
+`;
+
+const Trends = function ({ light=false, style={} }) {
+  const [loading, setLoading] = useState(true);
+  const [news, setNews] = useState([]);
+  useEffect(() => {
+    const getList = async () => {
+      setLoading(true);
+      const page_size = light ? 24 : 6;
+      const { data: { data: { list }}} = await ajax.get(_conf.api.news, { params: { page_size, lang: 'en'} });
+      setNews(list);
+      setLoading(false);
+    };
+    try {
+      getList();
+    } catch (error) {
+      
+    }
+  }, []);
+  if(loading) {
+    return <CardWrap>{new Array(6).fill(0).map((item, index) => <Card key={index} loading />)}</CardWrap>;
+  }
+
+  return (
+    <Wrap>
+      <Cont style={style}>
+        { !light && <h1>Trends <Link to="/trends">View more &gt;&gt;</Link></h1>}
+        <CardWrap>
+          {
+            news.map((item, index) => (
+              <Card style={{ height: 255 }} key={item.id} link={item.link} img={item.image} title={item.title} des={item.post_time} />
+            ))
+          }
+        </CardWrap>
+        { light && <More><a target="_blank" href="">Go to medium &gt;&gt;</a></More> }
+      </Cont>
+    </Wrap>
+  );
+};
 
 export default Trends;
