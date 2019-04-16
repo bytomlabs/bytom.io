@@ -45,7 +45,7 @@ export default function ({ tab, children }) {
         </Wrap>
       </Head>
       <Cont>
-        {children[curTabs]}
+        {children[curTabs] || children}
       </Cont>
     </>
   )
