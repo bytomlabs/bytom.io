@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import css from 'styled-components';
 import ajax from 'axios';
+import _conf from '../conf/config';
 
 
 const Wrap = css.div`
@@ -62,7 +63,7 @@ export default function Faucet() {
       return;
     }
     try {
-      const data = await ajax.post('https://kit.blockmeta.com/api/v1/get_testnet_coins', { receiver_str: address });
+      const data = await ajax.post(_conf.api.faucet, { receiver_str: address });
       if(data.data.tx_id){
         handleGetBtm(1)
       }
