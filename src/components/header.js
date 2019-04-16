@@ -71,7 +71,7 @@ const Header = ({ siteTitle }) => (
       <Nav>
         {
           _conf.nav.map((item, index) => (
-            <NavItem key={index}><Link to={item.href}>{item.name}</Link></NavItem>
+            <NavItem key={index}><Link activeClassName="active" to={item.href}>{item.name}</Link></NavItem>
           ))
         }
       </Nav>
