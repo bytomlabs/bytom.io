@@ -38,6 +38,9 @@ const NavItem = css.ul`
     &:hover{
       color: #035BD4;
     }
+    &.active{
+      color: #035BD4;
+    }
   }
 `;
 const Toolbar = css.div`

@@ -93,7 +93,16 @@ const Item = css.li`
   color: #666;
   padding-left: 30px;
   margin: 6px 0;
-  background: url(${(props) => props.img}) left center / 22px 22px no-repeat;
+  // background: url(${(props) => props.img}) left center / 22px 22px no-repeat;
+  .blue_dot{
+    display:inline-block;
+    width:5px;
+    height:5px;
+    background:rgba(3,91,212,1);
+    vertical-align: middle;
+    margin-right:10px;
+    opacity:1;
+  }
 `;
 const SectionVideo = () => (
   <Wrap>
@@ -103,7 +112,10 @@ const SectionVideo = () => (
       <List>
         {
           list.map((item, index) => (
-            <Item img={item.img} key={index}>{item.cont}</Item>
+            <Item img={item.img} key={index}>
+            <span className="blue_dot"></span>
+            {item.cont}
+            </Item>
           ))
         }
       </List>
