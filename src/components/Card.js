@@ -1,5 +1,6 @@
 import React from 'react';
 import css from 'styled-components';
+import CardLoading from './CardLoading';
 
 const Wrap = css.div`
   width: 392px;
@@ -9,8 +10,8 @@ const Wrap = css.div`
   cursor: pointer;
   &:hover{
     box-shadow: 0px 2px 12px rgba(0,0,0,0.12);
-    transition: all 0.3s;
-    transform: translateY(-2px);
+    // transition: all 0.3s;
+    // transform: translateY(-2px);
   }
   img{
     width: 100%;
@@ -18,7 +19,7 @@ const Wrap = css.div`
     display: inline-block;
   }
   h1{
-    font-size: 24px;
+    font-size: 18px;
     color: #1C1C1C;
     font-weight: bold;
     line-height: 1em;
@@ -36,13 +37,28 @@ const Wrap = css.div`
   }
 `;
 
-export default function Card({ img, title, des, style, exrta }) {
+export default function Card({ img, title, des, style, link, exrta, loading=false }) {
+  if(loading) {
+    return <CardLoading />;
+  }
   return (
     <Wrap style={style}>
-      <img src={img} alt=""/>
-      <h1>{title}</h1>
-      <p>{des}</p>
-      { exrta }
+      {
+        link ? 
+          <a target="_blank" href={link}>
+            <img src={img} alt=""/>
+            <h1>{title}</h1>
+            <p>{des}</p>
+            { exrta }
+          </a>
+        : 
+          <>
+            <img src={img} alt=""/>
+            <h1>{title}</h1>
+            <p>{des}</p>
+            { exrta }
+          </>
+      }
     </Wrap>
   )
 }
