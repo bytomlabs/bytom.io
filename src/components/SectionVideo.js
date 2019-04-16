@@ -71,7 +71,7 @@ const Video = css.div`
 const Title = css.div`
   position: relative;
   color: #035BD4;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: bold;
   top: 89px;
   line-height: 1em;
@@ -84,16 +84,20 @@ const Title = css.div`
 const List = css.ul`
   position: absolute;
   width: 600px;
-  top: 292px;
+  top: 310px;
 `;
 const Item = css.li`
-  width: 260px;
+  width: 50%;
   float: left;
   font-size: 16px;
   color: #666;
-  padding-left: 30px;
   margin: 6px 0;
-  // background: url(${(props) => props.img}) left center / 22px 22px no-repeat;
+  &:hover{
+    color: #000000;
+    .blue_dot{
+      background-color: #000;
+    }
+  }
   .blue_dot{
     display:inline-block;
     width:5px;
@@ -104,11 +108,22 @@ const Item = css.li`
     opacity:1;
   }
 `;
-const SectionVideo = () => (
+const Desc = css.p`
+  color: #666666;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  position: absolute;
+  top: 170px;
+  width: 500px;
+`;
+
+const SectionVideo = ({ info }) => (
   <Wrap>
     <Bg />
     <Cont>
-      <Title>WHY <br /><span>BYTOM</span></Title>
+      <Title>{info.title} <span>{info.subTitle}</span></Title>
+      <Desc>{info.desc}</Desc>
       <List>
         {
           list.map((item, index) => (

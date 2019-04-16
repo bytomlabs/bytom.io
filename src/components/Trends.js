@@ -85,7 +85,7 @@ const Trends = function ({ light=false, style={} }) {
             ))
           }
         </CardWrap>
-        { light && <More><a target="_blank" href="">Go to medium &gt;&gt;</a></More> }
+        { light && <More><a target="_blank" href="https://medium.com/@Bytom_Official">Go to medium &gt;&gt;</a></More> }
       </Cont>
     </Wrap>
   );

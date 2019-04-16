@@ -29,8 +29,7 @@ const Msg = css.div`
   margin-left: 32px;
   h1{
     color: #000;
-    font-size: 48px;
-
+    font-size: 44px;
   }
   span{
     color: #035BD4;
@@ -40,14 +39,16 @@ const Msg = css.div`
     font-weight: 400;
     color: #666;
     margin-top: 190px;
+    line-height: 28px;
+    font-weight: 400;
   }
 `;
-const SectionBytom = () => (
+const SectionBytom = ({ info }) => (
   <Wrap>
     <Cont>
       <Img></Img>
       <Msg>
-        <h1>HIERARCHICAL <br/><span>MODEL</span> OF BYTOM</h1>
+        <h1>{info.title} <br/><span>{info.subTitle}</span> {info.titleDes}</h1>
         <p>Bytom Blockchain Protocol is an interactive protocol of multiple byteassets. Heterogeneous byte-assets that operate in different forms on the Bytom Blockchain and atomic assets can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom.</p>
       </Msg>
     </Cont>

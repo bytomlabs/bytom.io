@@ -19,7 +19,7 @@ const Cont = css.div`
   h1{
     color: #fff;
     line-height: 66px;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
   }
 `;

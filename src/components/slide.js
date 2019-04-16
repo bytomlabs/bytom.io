@@ -14,22 +14,31 @@ const Cont = css.div`
   height: 100%;
   margin: 0 auto;
   color: #fff;
+  text-align: center;
   h1{
-    font-size: 56px;
+    font-size: 54px;
     font-weight: bold;
-    padding-top: 200px;
+    padding-top: 165px;
+    line-height: 72px;
+    span{
+      color: #257BF2;
+    }
   }
   p{
     font-size: 24px;
     font-weight: 300;
     margin-top: 20px;
+    color: #b3b3b3;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 36px;
   }
 `;
 const Slide = () => (
   <Wrap>
     <Cont>
-      <h1>Bytom Blockchain</h1>
-      <p>A digital asset layer protocol, is the <br/>infrastructure of asset Internet.</p>
+      <h1>Embrace the <span>New era</span> of <br/> Bytom Blockchain</h1>
+      <p>Muilt-assets platform and <br/> programmable economy</p>
     </Cont>
   </Wrap>
 );
