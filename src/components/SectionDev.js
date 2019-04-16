@@ -1,13 +1,14 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import css from 'styled-components';
+import img_bg from '../images/bg-dev-banner.png';
 
 
 const Wrap = css.div`
   width: 100%;
   height: 320px;
   box-sizing: border-box;
-  background: linear-gradient(90deg,rgba(3,91,212,1) 0%,rgba(62,143,255,1) 100%);
+  background: url(${img_bg}) center / cover;
 `;
 const Cont = css.div`
   max-width: 1280px;
@@ -26,13 +27,17 @@ const Button = css(Link)`
   margin-top: 40px;
   width: 244px;
   height: 48px;
-  background-color: #fff;
   line-height: 48px;
   font-size: 16px;
   text-align: center;
-  color: #035BD4;
+  color: #fff;
   font-weight: bold;
   display: inline-block;
+  border: 1px solid #fff;
+  &:hover{
+    background-color: #fff;
+    color: #000;
+  }
 `;
 const SectionDev = () => (
   <Wrap>

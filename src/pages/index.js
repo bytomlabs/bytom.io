@@ -22,7 +22,7 @@ const IndexPage = () => (
     <SectionVideo></SectionVideo>
     <SectionBytom></SectionBytom>
     <SectionDev></SectionDev>
-    {/* <Trends></Trends> */}
+    <Trends></Trends>
   </Layout>
 )
 
