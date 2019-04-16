@@ -19,8 +19,8 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`bytom`, `btm`, `比原`, `比原链`]} />
     <Slide></Slide>
     <DesBar features={_conf.features} />
-    <SectionVideo></SectionVideo>
-    <SectionBytom></SectionBytom>
+    <SectionVideo info={_conf.videoInfo}></SectionVideo>
+    <SectionBytom info={_conf.bytomInfo}></SectionBytom>
     <SectionDev></SectionDev>
     <Trends></Trends>
   </Layout>
