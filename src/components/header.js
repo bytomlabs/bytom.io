@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import css from 'styled-components';
+import _conf from '../conf/config'
 
 import img_logo from '../images/logo.png';
 
@@ -65,9 +66,11 @@ const Header = ({ siteTitle }) => (
     <Cont className="clearfix">
       <Logo to="/" />
       <Nav>
-        <NavItem><Link to="/dev/">Developer</Link></NavItem>
-        {/* <NavItem><Link to="/">Ecosystem</Link></NavItem> */}
-        <NavItem><Link to="/wallet/">Wallet</Link></NavItem>
+        {
+          _conf.nav.map((item, index) => (
+            <NavItem key={index}><Link to={item.href}>{item.name}</Link></NavItem>
+          ))
+        }
       </Nav>
       <Toolbar>
         <Github className="iconfont github" />

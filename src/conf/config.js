@@ -2,11 +2,15 @@ export default {
   nav: [
     {
       name: 'Developer',
-      href: '/dev',
+      href: '/dev/',
+    },
+    {
+      name: 'Ecosystem',
+      href: '/ecosystem/',
     },
     {
       name: 'Wallet',
-      href: '/wallet',
+      href: '/wallet/',
     },
   ],
   subNav: {
