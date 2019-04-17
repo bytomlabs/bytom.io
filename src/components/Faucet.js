@@ -13,7 +13,7 @@ const Wrap = css.div`
   position: relative;
   h2{
     font-size: 20px;
-    color: #035BD4;
+    color: #000000;
     line-height: 1em;
   }
   input{

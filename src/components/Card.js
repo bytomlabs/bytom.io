@@ -34,6 +34,9 @@ const Wrap = css.div`
     padding: 0 20px;
     height: 16px;
     padding-bottom: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 `;
 

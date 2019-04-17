@@ -28,7 +28,7 @@ module.exports = {
         name: `Bytom`,
         short_name: `bytom`,
         start_url: `/`,
-        icon: `src/images/logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo2.png`, // This path is relative to the root of the site.
       },
     },
     // {

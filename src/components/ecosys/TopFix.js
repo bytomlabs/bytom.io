@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import _conf from '../../conf/eco.conf';
 const Wrap = styled.div`
   width: 100%;
   height: 80px;
@@ -427,7 +428,7 @@ class TopFix extends React.Component {
         <ListWrap className="clearfix">
           <List>
             {
-              ecoList.map((item, index) => {
+              _conf.ecoList.map((item, index) => {
                 return (
                   <Element name={`test${index}`} className="element" key={index}>
                     <div className={(index % 2) !== 0 ? 'isEven' : ''} >
@@ -438,8 +439,10 @@ class TopFix extends React.Component {
                             item.list.map((imgInfo, imgIndex) => {
                               return (
                                 <li key={imgIndex}>
-                                  <img src={imgInfo.img} />
-                                  <p>{imgInfo.title}</p>
+                                  <a href={imgInfo.link}>
+                                    <img src={imgInfo.img} />
+                                    <p>{imgInfo.title}</p>
+                                  </a>
                                 </li>
                               )
                             })
