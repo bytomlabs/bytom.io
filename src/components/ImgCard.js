@@ -27,6 +27,7 @@ const Cont = css.div`
     display: inline-block;
     vertical-align: top;
     width: 152px;
+    font-size: 20px;
   }
   p{
     display: inline-block;
@@ -41,7 +42,6 @@ const Cont = css.div`
     text-overflow: ellipsis;
     -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical;
-    text-align: justify;
   }
 `;
 

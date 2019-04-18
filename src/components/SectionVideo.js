@@ -3,6 +3,8 @@ import React from 'react';
 import css from 'styled-components';
 
 import img_bg from '../images/bgv.png';
+import img_video_bg from '../images/play.png';
+import media_bytom from '../images/bytom.v1.mp4';
 
 const list = [
   {
@@ -67,6 +69,11 @@ const Video = css.div`
   position: absolute;
   top: 89px;
   right: 0;
+  video{
+    width: 100%;
+    height: 100%;
+    outline: none;
+  }
 `;
 const Title = css.div`
   position: relative;
@@ -117,6 +124,15 @@ const Desc = css.p`
   top: 170px;
   width: 500px;
 `;
+const Line = css.span`
+  display: inline-block;
+  width: 180px;
+  height: 1px;
+  background-color: #B3B3B3;
+  position: absolute;
+  top: 280px;
+  left: 0;
+`;
 
 const SectionVideo = ({ info }) => (
   <Wrap>
@@ -124,6 +140,7 @@ const SectionVideo = ({ info }) => (
     <Cont>
       <Title>{info.title} <span>{info.subTitle}</span></Title>
       <Desc>{info.desc}</Desc>
+      <Line />
       <List>
         {
           list.map((item, index) => (
@@ -134,7 +151,9 @@ const SectionVideo = ({ info }) => (
           ))
         }
       </List>
-      <Video />
+      <Video>
+        <video preload src={media_bytom} poster={img_video_bg} controls="controls"></video>
+      </Video>
     </Cont>
   </Wrap>
 );

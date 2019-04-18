@@ -80,9 +80,9 @@ export default function Faucet() {
       <button onClick={getBtm}>Get testnet 10 BTM for free</button>
       <p>
         Please input testnet address which is start from ‘tm’, here is Bytom Wallet official
-        <a href=""> download </a>
+        <Link to="/wallet"> download </Link>
         and
-        <a href=""> instruction </a>
+        <a href="/wallet"> instruction </a>
       </p>
     </Wrap>
   )

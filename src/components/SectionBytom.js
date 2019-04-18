@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import css from 'styled-components';
 
-import img_banner from '../images/Banner-00@2x.png';
+import img_bytom from '../images/bytom.png';
 
 const Wrap = css.div`
   width: 100%;
@@ -18,7 +18,6 @@ const Cont = css.div`
 const Img = css.img`
   width: 710px;
   height: 440px;
-  background-color: #b3b3b3;
   display: inline-block;
   vertical-align: top;
 `;
@@ -38,7 +37,7 @@ const Msg = css.div`
     font-size: 16px;
     font-weight: 400;
     color: #666;
-    margin-top: 190px;
+    margin-top: 122px;
     line-height: 28px;
     font-weight: 400;
   }
@@ -46,10 +45,10 @@ const Msg = css.div`
 const SectionBytom = ({ info }) => (
   <Wrap>
     <Cont>
-      <Img></Img>
+      <Img src={img_bytom}></Img>
       <Msg>
-        <h1>{info.title} <br/><span>{info.subTitle}</span> {info.titleDes}</h1>
-        <p>Bytom Blockchain Protocol is an interactive protocol of multiple byteassets. Heterogeneous byte-assets that operate in different forms on the Bytom Blockchain and atomic assets can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom.</p>
+        <h1>{info.title} <br/> {info.titleDes} <br/> <span>{info.subTitle}</span></h1>
+        <p>{info.desc}</p>
       </Msg>
     </Cont>
   </Wrap>
