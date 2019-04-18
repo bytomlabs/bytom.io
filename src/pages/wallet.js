@@ -25,7 +25,7 @@ const Title = css.h1`
   text-align: center;
   line-height: 1em;
   color: #fff;
-  padding: 152px 0 92px 0;
+  padding: 172px 0 72px 0;
 `;
 const Img = css.img`
   display: block;
@@ -49,6 +49,7 @@ const Download = css.div`
   &>img{
     width: 583px;
     height: 356px;
+    box-shadow: 1px 1px 7px 0px #1c1c1c21;
   }
   &>div{
     width: 620px;
@@ -160,7 +161,7 @@ const SubBanner = css.div`
 `;
 const CardWrap = css.div`
   max-width: 1280px;
-  height: 897px;
+  // height: 897px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -233,9 +234,9 @@ const WalletPage = () => (
       <Tabs
           tab={
             [
-              <span><i className="iconfont github"></i>Mobile Wallet</span>,
-              <span><i className="iconfont github"></i>Browser Extension</span>,
-              <span><i className="iconfont github"></i>Hardware Wallet</span>,
+              <span>Mobile Wallet</span>,
+              <span>Browser Extension</span>,
+              <span>Hardware Wallet</span>,
             ]
           }
         >

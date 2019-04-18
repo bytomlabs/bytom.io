@@ -39,7 +39,7 @@ const List = styled.div`
     }
   }
 `
-const Title = styled.p`
+const Title = styled.h1`
   font-size:28px;
   font-weight:bold;
   color:rgba(40,40,40,1);
@@ -57,13 +57,13 @@ const IconList = styled.ul`
     margin-bottom:30px;
     box-shadow:0px 2px 4px rgba(0,0,0,0.04);
     &:hover{
-      box-shadow: 0 6px 24px 2px rgba(0, 0, 0, .06), 0 6px 30px 5px rgba(0, 0, 0, .04), 0 0 10px -5px rgba(0, 0, 0, .08);
+      box-shadow: 0px 2px 12px rgba(0,0,0,0.12);
       transition: all .3s ease;
     }
     img{
 
     }
-    p{
+    h2{
       font-size:18px;
       font-weight:bold;
       line-height:26px;
@@ -193,7 +193,7 @@ class TopFix extends React.Component {
                                 <li key={imgIndex}>
                                   <a target="_blank" href={imgInfo.link}>
                                     <img src={imgInfo.img} />
-                                    <p>{imgInfo.title}</p>
+                                    <h2>{imgInfo.title}</h2>
                                   </a>
                                 </li>
                               )

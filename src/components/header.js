@@ -46,7 +46,7 @@ const NavItem = css.ul`
 const Toolbar = css.div`
   display: block;
   float: right;
-  width: 100px;
+  width: 20px;
   height: 80px;
   line-height: 80px;
 `;
@@ -83,7 +83,7 @@ const Header = ({ siteTitle }) => (
       </Nav>
       <Toolbar>
         <Github target="_blank" href="https://github.com/Bytom/bytom" className="iconfont github" />
-        <Lang className="iconfont lang" />
+        {/* <Lang className="iconfont lang" /> */}
       </Toolbar>
     </Cont>
   </Wrap>

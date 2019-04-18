@@ -7,11 +7,11 @@ const Table = css.table`
   width: 100%;
   margin-top: 60px;
   border-collapse: collapse;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.04);
   td{
     height: 48px;
     line-height: 48px;
     box-sizing: border-box;
-    
     &:first-child{
       padding-left: 60px;
     }
@@ -21,6 +21,8 @@ const Table = css.table`
   }
   tr{
     background-color: #fff;
+    display: flex;
+    justify-content: space-between;
   }
   tr:nth-child(2n+2){
     background-color: #f8f8f8;
@@ -37,7 +39,6 @@ const Footer = css.div`
   line-height: 60px;
   text-align: right;
   font-size: 16px;
-  background-color: #f8f8f8;
   border-bottom: 1px solid #E3E3E3;
 `;
 export default ({ data }) => (

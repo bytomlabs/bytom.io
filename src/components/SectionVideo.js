@@ -99,6 +99,7 @@ const Item = css.li`
   font-size: 16px;
   color: #666;
   margin: 6px 0;
+  font-weight: 300;
   &:hover{
     color: #000000;
     .blue_dot{

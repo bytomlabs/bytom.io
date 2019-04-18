@@ -257,7 +257,7 @@ export default {
         },
         {
           img: require('../images/eco/6-xajd.png'),
-          title: '西安交通大学'
+          title: '西南交通大学'
         },
         {
           img: require('../images/eco/6-DIF.png'),
