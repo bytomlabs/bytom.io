@@ -5,6 +5,7 @@ import css from 'styled-components';
 import Card from '../components/Card';
 import _conf from '../conf/config';
 import ajax from 'axios';
+import { format } from 'date-fns';
 
 
 const Wrap = css.div`
@@ -53,6 +54,16 @@ const More = css.div`
   padding: 20px 0 80px;
 `;
 
+const getTimes = (times) => {
+  let result = '';
+  try{
+    result = format(new Date(+times), 'YYYY-MM-DD HH:mm:ss')
+  } catch(err) {
+    console.log(err);
+  }
+  return result;
+}
+
 const Trends = function ({ light=false, style={} }) {
   const [loading, setLoading] = useState(true);
   const [news, setNews] = useState([]);
@@ -81,7 +92,7 @@ const Trends = function ({ light=false, style={} }) {
         <CardWrap>
           {
             news.map((item, index) => (
-              <Card style={{ height: 255 }} key={item.id} link={item.link} img={item.image} title={item.title} des={item.post_time} />
+              <Card style={{ height: 255 }} key={item.id} link={item.link} img={item.image} title={item.title} des={getTimes(item.post_time)} />
             ))
           }
         </CardWrap>
