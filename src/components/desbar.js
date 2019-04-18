@@ -40,6 +40,7 @@ const Msg = css.span`
     font-size: 14px;
     font-weight: 400;
     color: #666;
+    margin-top: 6px;
   }
 `;
 const DesBar = ({ features = [] }) => (

@@ -14,17 +14,17 @@ const Cont = css.div`
   max-width: 1280px;
   height: 100%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 60px 0;
   text-align: center;
   h1{
     color: #fff;
-    line-height: 66px;
+    line-height: 50px;
     font-size: 28px;
     font-weight: bold;
   }
 `;
 const Button = css(Link)`
-  margin-top: 40px;
+  margin-top: 20px;
   width: 244px;
   height: 48px;
   line-height: 48px;

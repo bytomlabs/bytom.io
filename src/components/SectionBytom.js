@@ -29,6 +29,7 @@ const Msg = css.div`
   h1{
     color: #000;
     font-size: 44px;
+    line-height: 64px;
   }
   span{
     color: #035BD4;
@@ -37,7 +38,7 @@ const Msg = css.div`
     font-size: 16px;
     font-weight: 400;
     color: #666;
-    margin-top: 122px;
+    margin-top: 56px;
     line-height: 28px;
     font-weight: 400;
   }

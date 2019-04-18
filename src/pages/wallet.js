@@ -20,12 +20,12 @@ import img_sub_banner from '../images/wallet/bannerWallet.png';
 
 
 const Title = css.h1`
-  font-size: 56px;
+  font-size: 54px;
   font-weight: bold;
   text-align: center;
   line-height: 1em;
   color: #fff;
-  padding: 150px 0 92px 0;
+  padding: 152px 0 92px 0;
 `;
 const Img = css.img`
   display: block;

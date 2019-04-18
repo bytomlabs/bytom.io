@@ -110,7 +110,7 @@ const Item = css.li`
     width:5px;
     height:5px;
     background:rgba(3,91,212,1);
-    vertical-align: middle;
+    vertical-align: 4px;
     margin-right:10px;
     opacity:1;
   }
@@ -152,7 +152,7 @@ const SectionVideo = ({ info }) => (
         }
       </List>
       <Video>
-        <video preload src={media_bytom} poster={img_video_bg} controls="controls"></video>
+        <video preload="true" src={media_bytom} poster={img_video_bg} controls="controls"></video>
       </Video>
     </Cont>
   </Wrap>
