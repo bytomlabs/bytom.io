@@ -21,8 +21,8 @@ const Table = css.table`
   }
   tr{
     background-color: #fff;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
   }
   tr:nth-child(2n+2){
     background-color: #f8f8f8;
@@ -50,7 +50,7 @@ export default ({ data }) => (
             <tr>
             {
               data.title.map((item, index) => (
-                <td key={index}>{item}</td>
+                <td width={data.width && data.width[index]} key={index}>{item}</td>
               ))
             }
             </tr>

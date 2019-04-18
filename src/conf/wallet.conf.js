@@ -108,6 +108,7 @@ export default {
   ],
   historyVersions: {
     title: ['Versions', 'Files', 'Checksums(MD5)'],
+    width: [null, null, 200],
     data: [
       ['Bytom Wallet for macOS v1.0.8', 'bytom-wallet-desktop-1.0.8-mac.zip', '08a4ac6290df4659080d38f32d6f46ee'],
       ['Bytom Wallet for Win 32 v1.0.8', 'bytom-wallet-desktop-1.0.8-win-ia32.zip	', '57d4b1c054c2245ed8f071571fc8d211'],
@@ -119,8 +120,9 @@ export default {
   },
   fileList: {
     title: ['File', 'Height', 'Size', 'Checksums(MD5)', 'Last update', 'Link'],
+    width: [280, 110, 150, 350, 260],
     data: [
-      ['190228-Update.db.zip', '188516', '349.02 MB', '1B83A19E97D65EF8BDEA490F2364780F', '2018-05-01 05:56:47 (GMT+8)', <a href="http://p853yonds.bkt.clouddn.com/190228-Update.db.zip">Download</a>],
+      ['190228-Update.db.zip', '188516', '349.02 MB', '1B83A19E97D65EF8BDEA490F2364780F', '2019-02-28 19:00:00 (GMT+8)', <a href="http://p853yonds.bkt.clouddn.com/190228-Update.db.zip">Download</a>],
     ],
   },
 };
