@@ -4,7 +4,7 @@ import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, 
 import _conf from '../../conf/eco.conf';
 const Wrap = styled.div`
   width: 100%;
-  height: 80px;
+  height: 72px;
   box-shadow:0px 2px 4px rgba(0,0,0,0.04);
   opacity:1;
 `;
@@ -17,7 +17,7 @@ const Cont = styled.ul`
 `;
 const Item = styled.li`
   font-size:16px;
-  line-height:77px;
+  line-height:69px;
   color:rgba(0,0,0,1);
   padding:0 20px;
   cursor: pointer;
@@ -29,7 +29,6 @@ const ListWrap = styled.div`
 `;
 const List = styled.div`
   div{
-    padding-bottom:60px;
     &.isEven{
       background:#fff;
     }
@@ -41,10 +40,10 @@ const List = styled.div`
   }
 `
 const Title = styled.p`
-  font-size:36px;
+  font-size:28px;
   font-weight:bold;
   color:rgba(40,40,40,1);
-  padding:50px 0;
+  padding:60px 0 40px 0;
 `
 const IconList = styled.ul`
   display:flex;
@@ -103,254 +102,7 @@ const navList = [
     index: 5
   },
 ];
-const ecoList = [
-  {
-    title: 'Wallets',
-    list: [
-      {
-        img: require('../../images/eco/1-bycoin.png'),
-        title: 'Bycoin'
-      },
-      {
-        img: require('../../images/eco/1-byone.png'),
-        title: 'Byone'
-      },
-      {
-        img: require('../../images/eco/1-HyperPay.png'),
-        title: 'HyperPay'
-      },
-      {
-        img: require('../../images/eco/1-Bixin.png'),
-        title: 'Bixin'
-      },
-      {
-        img: require('../../images/eco/1-Hoo.png'),
-        title: 'Hoo'
-      },
-      {
-        img: require('../../images/eco/1-BEPAL.png'),
-        title: 'BEPAL'
-      },
-      {
-        img: require('../../images/eco/1-Bitpie.png'),
-        title: 'Bitpie'
-      },
-    ]
-  },
-  {
-    title: 'Explorers',
-    list: [
-      {
-        img: require('../../images/eco/2-Blockmeta.png'),
-        title: 'Blockmeta'
-      },
-      {
-        img: require('../../images/eco/2-Btmscan.png'),
-        title: 'Btmscan'
-      },
-      {
-        img: require('../../images/eco/2-Tokenview.png'),
-        title: 'Tokenview'
-      }
-    ]
-  },
-  {
-    title: 'Mining Pools',
-    list: [
-      {
-        img: require('../../images/eco/3-MATPool.png'),
-        title: 'MATPool'
-      },
-      {
-        img: require('../../images/eco/3-Antpool.png'),
-        title: 'Antpool'
-      },
-      {
-        img: require('../../images/eco/3-F2Pool.png'),
-        title: 'F2Pool'
-      },
-      {
-        img: require('../../images/eco/3-Beepool.png'),
-        title: 'Beepool'
-      },
-      {
-        img: require('../../images/eco/3-UUPool.png'),
-        title: 'UUPool'
-      },
-      {
-        img: require('../../images/eco/3-ZhizhuPool.png'),
-        title: 'ZhizhuPool'
-      },
-      {
-        img: require('../../images/eco/3-ViaBTC.png'),
-        title: 'ViaBTC'
-      },
-      {
-        img: require('../../images/eco/3-POOLREN.png'),
-        title: 'POOL.REN'
-      }
-    ]
-  },
-  {
-    title: 'Exchanges',
-    list: [
-      {
-        img: require('../../images/eco/4-OKEx.png'),
-        title: 'OKEx'
-      },
-      {
-        img: require('../../images/eco/4-HuobiGlobal.png'),
-        title: 'Huobi Global'
-      },
-      {
-        img: require('../../images/eco/4-Gateio.png'),
-        title: 'Gateio'
-      },
-      {
-        img: require('../../images/eco/4-Bittrex.png'),
-        title: 'Bittrex'
-      },
-      {
-        img: require('../../images/eco/4-UPbit.png'),
-        title: 'UPbit'
-      },
-      {
-        img: require('../../images/eco/4-CoinEgg.png'),
-        title: 'CoinEgg'
-      },
-      {
-        img: require('../../images/eco/4-ZBcom.png'),
-        title: 'ZB.com'
-      },
-      {
-        img: require('../../images/eco/4-BitMart.png'),
-        title: 'BitMart'
-      },
-      {
-        img: require('../../images/eco/4-Bibox.png'),
-        title: 'Bibox'
-      },
-      {
-        img: require('../../images/eco/4-BWcom.png'),
-        title: 'BW.com'
-      },
-      {
-        img: require('../../images/eco/4-CoinTiger.png'),
-        title: 'CoinTiger'
-      },
-      {
-        img: require('../../images/eco/4-DragonEX.png'),
-        title: 'DragonEX'
-      },
-      {
-        img: require('../../images/eco/4-HitBTC.png'),
-        title: 'HitBTC'
-      },
-      {
-        img: require('../../images/eco/4-TOKOK.png'),
-        title: 'TOKOK'
-      },
-      {
-        img: require('../../images/eco/4-CoinEx.png'),
-        title: 'CoinEx'
-      },
-      {
-        img: require('../../images/eco/4-KuCoin.png'),
-        title: 'KuCoin'
-      },
-      {
-        img: require('../../images/eco/4-RightBTC.png'),
-        title: 'RightBTC'
-      },
-      {
-        img: require('../../images/eco/4-FCoin.png'),
-        title: 'FCoin'
-      },
-      {
-        img: require('../../images/eco/4-LBank.png'),
-        title: 'LBank'
-      },
-      {
-        img: require('../../images/eco/4-CoinMex.png'),
-        title: 'CoinMex'
-      }
-    ]
-  },
-  {
-    title: 'Safety',
-    list: [
-      {
-        img: require('../../images/eco/5-360.png'),
-        title: '360'
-      },
-      {
-        img: require('../../images/eco/5-SlowMist.png'),
-        title: 'SlowMist'
-      },
-      {
-        img: require('../../images/eco/5-PeckShield.png'),
-        title: 'PeckShield'
-      },
-      {
-        img: require('../../images/eco/5-Beosin.png'),
-        title: 'Beosin'
-      },
-      {
-        img: require('../../images/eco/5-BUGX.png'),
-        title: 'BUGX'
-      }
-    ]
-  },
-  {
-    title: 'Partners',
-    list: [
-      {
-        img: require('../../images/eco/6-8BTC.png'),
-        title: '8BTC'
-      },
-      {
-        img: require('../../images/eco/6-Bitmain.png'),
-        title: 'Bitmain'
-      },
-      {
-        img: require('../../images/eco/6-szwh.png'),
-        title: '深圳文化产权交易所'
-      },
-      {
-        img: require('../../images/eco/6-zjzs.png'),
-        title: '浙江知识产权交易中心'
-      },
-      {
-        img: require('../../images/eco/6-dhdsj.png'),
-        title: '东湖大数据交易中心'
-      },
-      {
-        img: require('../../images/eco/6-Purdue.png'),
-        title: 'Purdue'
-      },
-      {
-        img: require('../../images/eco/6-xajd.png'),
-        title: '西安交通大学'
-      },
-      {
-        img: require('../../images/eco/6-DIF.png'),
-        title: 'DIF'
-      },
-      {
-        img: require('../../images/eco/6-Junction.png'),
-        title: 'Junction'
-      },
-      {
-        img: require('../../images/eco/6-kys.png'),
-        title: '开源社'
-      },
-      {
-        img: require('../../images/eco/6-BEN.png'),
-        title: 'BEN'
-      }
-    ]
-  },
-]
+
 class TopFix extends React.Component {
   constructor(props) {
     super(props);
@@ -431,7 +183,7 @@ class TopFix extends React.Component {
               _conf.ecoList.map((item, index) => {
                 return (
                   <Element name={`test${index}`} className="element" key={index}>
-                    <div className={(index % 2) !== 0 ? 'isEven' : ''} >
+                    <div style={{paddingBottom: 50}} className={(index % 2) !== 0 ? 'isEven' : ''} >
                       <div className="content">
                         <Title>{item.title}</Title>
                         <IconList>
@@ -439,7 +191,7 @@ class TopFix extends React.Component {
                             item.list.map((imgInfo, imgIndex) => {
                               return (
                                 <li key={imgIndex}>
-                                  <a href={imgInfo.link}>
+                                  <a target="_blank" href={imgInfo.link}>
                                     <img src={imgInfo.img} />
                                     <p>{imgInfo.title}</p>
                                   </a>

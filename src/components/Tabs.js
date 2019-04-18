@@ -24,8 +24,9 @@ const Item = css.li`
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  border-bottom: ${(props) => props.isCur ? '3px ' : '0'} solid #035BD4;
+  border-bottom: 3px solid ${(props) => props.isCur ? '#035BD4 ' : '#fff '};
   height: 72px;
+  transition:all .4s;
   box-sizing: border-box;
   i{
     margin-right: 8px;
