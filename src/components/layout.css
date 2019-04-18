@@ -118,8 +118,15 @@ html {
 }
 body {
   font-size: 14px;
+  letter-spacing: 1px;
   background-color: #f8f8f8;
   font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h1, h2, h3{
+  letter-spacing: 1.5px;
+}
+p, li{
+  font-weight: 300 !important;
 }
 
 blockquote,body,dd,dl,fieldset,h1,h2,h3,h4,h5,h6,ol,p,pre,ul {
