@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import _conf from '../../conf/eco.conf';
+
 const Wrap = styled.div`
   width: 100%;
   height: 72px;
   box-shadow:0px 2px 4px rgba(0,0,0,0.04);
   opacity:1;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
 `;
 const Cont = styled.ul` 
   max-width: 1280px; 
@@ -14,6 +18,7 @@ const Cont = styled.ul`
   margin: 0 auto;
   display:flex;
   align-items:center;
+  
 `;
 const Item = styled.li`
   font-size:16px;
@@ -156,6 +161,7 @@ class TopFix extends React.Component {
 
     scroller.scrollTo(`test${index}`, {
       duration: 800,
+      offset: -70,
       delay: 0,
       smooth: 'easeInOutQuart'
     })
@@ -170,7 +176,7 @@ class TopFix extends React.Component {
                 return (
                   <Item isCur={index === this.state.currnetIndex} key={index} onClick={() => this.handleClick(index)}
                   >
-                   {item.name}
+                  {item.name}
                   </Item>
                 )
               })
