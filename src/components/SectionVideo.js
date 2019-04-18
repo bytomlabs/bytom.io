@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { useState } from 'react';
 import css from 'styled-components';
 
 import img_bg from '../images/bgv.png';
@@ -134,29 +134,43 @@ const Line = css.span`
   top: 280px;
   left: 0;
 `;
+const VideoPoster = css.div`
+  width: 100%;
+  height: 100%;
+  background: url(${img_video_bg}) center / 100%;
+`;
 
-const SectionVideo = ({ info }) => (
-  <Wrap>
-    <Bg />
-    <Cont>
-      <Title>{info.title} <span>{info.subTitle}</span></Title>
-      <Desc>{info.desc}</Desc>
-      <Line />
-      <List>
-        {
-          list.map((item, index) => (
-            <Item img={item.img} key={index}>
-            <span className="blue_dot"></span>
-            {item.cont}
-            </Item>
-          ))
-        }
-      </List>
-      <Video>
-        <video preload="true" src={media_bytom} poster={img_video_bg} controls="controls"></video>
-      </Video>
-    </Cont>
-  </Wrap>
-);
+const SectionVideo = ({ info }) => {
+
+  const [isVideoVisable, toggle] = useState(false);
+
+  return (
+    <Wrap>
+      <Bg />
+      <Cont>
+        <Title>{info.title} <span>{info.subTitle}</span></Title>
+        <Desc>{info.desc}</Desc>
+        <Line />
+        <List>
+          {
+            list.map((item, index) => (
+              <Item img={item.img} key={index}>
+              <span className="blue_dot"></span>
+              {item.cont}
+              </Item>
+            ))
+          }
+        </List>
+        <Video>
+          {
+            isVideoVisable ?
+              <video autoPlay src={media_bytom} poster={img_video_bg} controls="controls"></video>
+            : <VideoPoster onClick={() => toggle(true)} />
+          }
+        </Video>
+      </Cont>
+    </Wrap>
+  );
+};
 
 export default SectionVideo;
