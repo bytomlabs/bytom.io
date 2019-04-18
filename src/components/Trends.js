@@ -57,7 +57,7 @@ const More = css.div`
 const getTimes = (times) => {
   let result = '';
   try{
-    result = format(new Date(+times), 'YYYY-MM-DD HH:mm:ss')
+    result = format(new Date(+times), 'MMM Do, YYYY')
   } catch(err) {
     console.log(err);
   }

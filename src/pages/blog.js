@@ -22,14 +22,14 @@ const PageTitle = css.h1`
 const PageDesc = css.p`
   font-size: 24px;
   color: #fff;
-  line-height: 36px;
+  line-height: 50px;
   text-align: center;
   font-weight: 300;
-  padding-top: 205px;
+  padding-top: 190px;
   margin-bottom: 20px;
 `;
 const Follow = css.div`
-  width: 250px;
+  width: 300px;
   margin: 0 auto;
 `;
 const CardWrap = css.div`
@@ -49,8 +49,8 @@ export default function Blog() {
       <SEO title="Blog" />
       <Banner>
         {/* <PageTitle>Bytom Trends</PageTitle> */}
-        <PageDesc>Project weekly report, article, activities and videos <br/> about Bytom will synchronous update.</PageDesc>
-        <Follow><Follows /></Follow>
+        <PageDesc>Announcement, Project weekly report, article, <br/> and videos about Bytom will synchronous update.</PageDesc>
+        <Follow><Follows size={32} /></Follow>
       </Banner>
       <Tabs
         tab={['Blog']}
