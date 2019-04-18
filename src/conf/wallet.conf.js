@@ -1,5 +1,6 @@
 import React from 'react';
 
+import img_anybit from '../images/wallet/mobile/wallet-anybit@2x.png';
 import img_bycoin from '../images/wallet/mobile/wallet-bycoin@2x.png';
 import img_bixin from '../images/wallet/mobile/wallet-bixin@2x.png';
 import img_bepal from '../images/wallet/mobile/wallet-bepal@2x.png';
@@ -56,19 +57,24 @@ export default {
   ],
   mobileWalletList: [
     {
+      img: img_anybit,
+      title: 'Anybit Wallet',
+      des: 'Your Mobile crypto Manager'
+    },
+    {
       img: img_bepal,
       title: 'Bepal Wallet',
       des: 'Safe and easy to use with attractive interface'
     },
     {
-      img: img_bixin,
-      title: 'Binxin Wallet',
-      des: 'Blockchain in your pocket'
-    },
-    {
       img: img_bitpie,
       title: 'Bitpie Wallet',
       des: 'Industry-leading multi-blockchain wallet'
+    },
+    {
+      img: img_bixin,
+      title: 'Binxin Wallet',
+      des: 'Blockchain in your pocket'
     },
     {
       img: img_bycoin,

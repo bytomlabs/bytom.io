@@ -42,10 +42,10 @@ export default {
     ]
   },
   bytomInfo: {
-    title: 'HIERARCHICAL',
-    titleDes: 'OF BYTOM',
-    subTitle: 'MODEL',
-    desc: 'Bytom adopts three-layer architecture which is friendly to develop asset management applications, issue and manage assets as well as spend, transfer and other operations through  application layer, contract layer and data transmission layer.Bytom’s consensus mechanism is POW algorithm which is friendly to Al ASIC chips.'
+    title: 'COMMERIAL',
+    titleDes: 'PLATFORM BASED ON',
+    subTitle: 'BYTOM BLOCKCHAIN',
+    desc: 'Bytom blockchain adopts POW consensus algorithm to guarantee the security and decentralization of assets. Bytom’s side chain Vapor utilizes pluggable technology to realize different solutions. With the public chain and the side chain as infrastructure for commercial platform, the entire bottom layer of blockchain can be connected through an interactive protocol called Federation. '
   }
 
 };

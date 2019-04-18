@@ -2,6 +2,11 @@ export default {
   ecoList: [{
       title: 'Wallets',
       list: [{
+          img: require('../images/eco/1-Anybit.png'),
+          title: 'Anybit',
+          link: 'https://www.anybit.io/',
+        },
+        {
           img: require('../images/eco/1-BEPAL.png'),
           title: 'BEPAL',
           link: 'https://www.bepal.pro/',

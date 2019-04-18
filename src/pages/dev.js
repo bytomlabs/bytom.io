@@ -25,25 +25,20 @@ const BannerWrap = css.div`
   padding: 145px 0;
   justify-content: space-between;
   align-items: center;
-  img{
-    width: 212px;
-    height: 150px;
-    display: inline-block;
-  }
-  div{
+  div:first-child{
     color: #fff;
     flex: 1;
-    margin-left: 32px;
     h1{
-      font-size: 56px;
+      font-size: 54px;
       font-weight: bold;
       line-height: 1em;
     }
     p{
       margin-top: 30px;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 300;
       line-height: 32px;
+      color: #B3B3B3;
     }
   }
 `;
@@ -73,7 +68,7 @@ const DocumentBanner = css.div`
   h1{
     text-align: center;
     color: #000;
-    font-size: 36px;
+    font-size: 28px;
     padding: 80px 0 30px 0;
   }
   a{
@@ -91,7 +86,7 @@ const DocumentBanner = css.div`
   }
 `;
 const SubTitle = css.h1`
-  font-size: 36px;
+  font-size: 28px;
   color: #282828;
   line-height: 1em;
   margin: 40px 0;
@@ -99,8 +94,8 @@ const SubTitle = css.h1`
 
 const Document = () => (
   <DocumentBanner>
-    <h1>Document for development</h1>
-    <a href="">View more</a>
+    <h1>Bytom Develop Document</h1>
+    <a href={_conf.help}>View more</a>
   </DocumentBanner>
 );
 
@@ -110,9 +105,9 @@ const DevPage = () => (
     <Banner>
       <Cont>
         <BannerWrap>
-          <img src={img_dev} alt=""/>
+          {/* <img src={img_dev} alt=""/> */}
           <div>
-            <h1>Bytom DEV</h1>
+            <h1>Bytom Developer</h1>
             <p>Committed to development of <br/> Bytom blockchain ecosystem</p>
           </div>
           <Faucet />
@@ -121,8 +116,8 @@ const DevPage = () => (
     </Banner>
     <Tabs
       tab={[
-        <span><i className="iconfont github"></i>Tech & Tools</span>,
-        <span><i className="iconfont github"></i>DEV Bounties</span>,
+        <span>Tech & Tools</span>,
+        <span>Bounties</span>,
       ]}
     >
       <TechWrap>
@@ -139,7 +134,7 @@ const DevPage = () => (
           <SubTitle>Development Tools</SubTitle>
           <TabsCont>
             {
-              _conf.toolsList.map((item, index) => <Card style={{marginBottom: 40}} key={index} {...item} />)
+              _conf.toolsList.map((item, index) => <Card style={{width: 286, marginBottom: 40}} key={index} {...item} />)
             }
             <div style={{width: 392}}></div>
           </TabsCont>

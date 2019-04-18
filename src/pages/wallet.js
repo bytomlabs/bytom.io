@@ -160,7 +160,7 @@ const SubBanner = css.div`
 `;
 const CardWrap = css.div`
   max-width: 1280px;
-  height: 598px;
+  height: 897px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
