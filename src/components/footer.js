@@ -11,25 +11,25 @@ const links = [
       {title: 'Wallet', href: '/wallet'},
       {title: 'Explorer', href: 'http://blockmeta.com/'},
       {title: 'Blog', href: '/blog/'},
-      {title: 'Forum', href: 'https://forum.bytom.io/'},
+      // {title: 'Forum', href: 'https://forum.bytom.io/'},
     ]
   },
   {
     title: 'Developer',
     list: [
-      {title: 'GitHub', href: 'https://github.com/Bytom/'},
+      {title: 'GitHub', href: 'https://github.com/Bytom/bytom'},
       {title: 'Wiki', href: 'https://docs.bytom.io/'},
       {title: 'Tools', href: '/dev/'},
-      {title: 'Bounty', href: '/bounty/'},
+      {title: 'Bounty', href: '/dev/bounty'},
     ]
   },
   {
     title: 'About',
     list: [
-      {title: 'About', href: '/'},
-      {title: 'Team', href: '/'},
+      // {title: 'About', href: '/'},
+      {title: 'Team', href: '/', disable: true},
       {title: 'Ecosystem', href: '/ecosystem'},
-      {title: 'Join', href: '/'},
+      {title: 'Join', href: '/', disable: true},
     ]
   },
   {
@@ -65,6 +65,10 @@ const Item = css.div`
   ul li{
     font-size: 14px;
     margin: 16px 0;
+    span{
+      color: rgba(255, 255, 255, 0.4);
+      cursor: not-allowed;
+    }
     a{
       color: #fff;
     }
@@ -113,7 +117,11 @@ const Footer = ({ siteTitle }) => (
                 {
                   item.list.map((sitem, sindex) => (
                     <li key={sindex}>
-                      <a href={sitem.href || '/'}>{sitem.title}</a>
+                    {
+                      sitem.disable ? 
+                        <span>{sitem.title}</span>
+                      : <a target="_blank" href={sitem.href || '/'}>{sitem.title}</a>
+                    }
                     </li>
                   ))
                 }

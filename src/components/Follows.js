@@ -7,7 +7,7 @@ const Wrap = css.ul`
   li{
     float: left;
     i{
-      font-size: 23px;
+      font-size: ${(props) => props.size}px;
       color: #666;
       &:hover{
         color: #fff;
@@ -16,9 +16,9 @@ const Wrap = css.ul`
   }
 `;
 
-export default function Follows() {
+export default function Follows({ size=23 }) {
   return (
-    <Wrap>
+    <Wrap size={size}>
       <li><a target="_blank" href="https://twitter.com/Bytom_Official"><i className="iconfont twitter"></i></a></li>
       <li><a target="_blank" href="https://mp.weixin.qq.com/s/fLCk33KYQTouevEAi0a0Kg"><i className="iconfont wechat"></i></a></li>
       <li><a target="_blank" href="https://weibo.com/u/5966947038?refer_flag=1001030101_"><i className="iconfont weibo"></i></a></li>
