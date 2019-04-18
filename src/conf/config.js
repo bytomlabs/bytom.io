@@ -17,8 +17,12 @@ export default {
       href: '/wallet/',
     },
     {
-      name: 'Trends',
-      href: '/trends/',
+      name: 'Explorer',
+      href: 'https://blockmeta.com',
+    },
+    {
+      name: 'Blog',
+      href: '/blog/',
     },
   ],
   subNav: {

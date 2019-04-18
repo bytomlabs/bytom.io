@@ -20,12 +20,13 @@ const PageTitle = css.h1`
   padding-top: 195px;
 `;
 const PageDesc = css.p`
-  font-size: 20px;
-  color: #b3b3b3;
+  font-size: 24px;
+  color: #fff;
   line-height: 36px;
   text-align: center;
   font-weight: 300;
-  margin: 20px 0;
+  padding-top: 205px;
+  margin-bottom: 20px;
 `;
 const Follow = css.div`
   width: 250px;
@@ -42,12 +43,12 @@ const CardWrap = css.div`
   }
 `;
 
-export default function Trends() {
+export default function Blog() {
   return (
     <Layout>
-      <SEO title="Trends" />
+      <SEO title="Blog" />
       <Banner>
-        <PageTitle>Bytom Trends</PageTitle>
+        {/* <PageTitle>Bytom Trends</PageTitle> */}
         <PageDesc>Project weekly report, article, activities and videos <br/> about Bytom will synchronous update.</PageDesc>
         <Follow><Follows /></Follow>
       </Banner>

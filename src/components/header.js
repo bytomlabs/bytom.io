@@ -50,8 +50,8 @@ const Toolbar = css.div`
   height: 80px;
   line-height: 80px;
 `;
-const Github = css.div`
-  font-size: 16px;
+const Github = css.a`
+  font-size: 23px !important;
   color: #666;
   width: 20px;
   display: inline-block;
@@ -71,12 +71,18 @@ const Header = ({ siteTitle }) => (
       <Nav>
         {
           _conf.nav.map((item, index) => (
-            <NavItem key={index}><Link activeClassName="active" to={item.href}>{item.name}</Link></NavItem>
+            <NavItem key={index}>
+              {
+                /^http/.test(item.href) ?
+                  <a target="_blank" href={item.href}>{item.name}</a>
+                : <Link activeClassName="active" to={item.href}>{item.name}</Link>
+              }
+            </NavItem>
           ))
         }
       </Nav>
       <Toolbar>
-        <Github className="iconfont github" />
+        <Github target="_blank" href="https://github.com/Bytom/bytom" className="iconfont github" />
         <Lang className="iconfont lang" />
       </Toolbar>
     </Cont>
