@@ -14,7 +14,7 @@ const Cont = css.div`
   max-width: 1280px;
   height: 100%;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 70px 0;
   text-align: center;
   h1{
     color: #fff;

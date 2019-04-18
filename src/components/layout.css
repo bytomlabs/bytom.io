@@ -128,6 +128,9 @@ h1, h2, h3{
 p{
   font-weight: 300 !important;
 }
+a{
+  transition: all 0.3s;
+}
 
 blockquote,body,dd,dl,fieldset,h1,h2,h3,h4,h5,h6,ol,p,pre,ul {
   margin: 0
