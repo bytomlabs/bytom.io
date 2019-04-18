@@ -1,5 +1,6 @@
-import img_banner from '../images/gatsby-icon.png';
-import img_icon_des from '../images/icon-des.png';
+import img_icon_des1 from '../images/icon-des.png';
+import img_icon_des2 from '../images/icon-des2.png';
+import img_icon_des3 from '../images/icon-des3.png';
 
 
 export default {
@@ -11,17 +12,17 @@ export default {
   ],
   features: [
     {
-      img: img_icon_des,
+      img: img_icon_des1,
       title: 'Intelligent',
       cont: 'Consensus algorithm promotes AI techniques, calculation power actually using.'
     },
     {
-      img: img_icon_des,
+      img: img_icon_des2,
       title: 'Flexible',
       cont: 'Customize Your Smart contract, completely control assets, power the future of the econmy.'
     },
     {
-      img: img_icon_des,
+      img: img_icon_des3,
       title: 'Efficient',
       cont: 'Digital Asset Atomic Transfer, high concurrent exchange, adaptable to different business environments.'
     },
