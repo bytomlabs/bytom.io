@@ -8,6 +8,8 @@ import img_hoo from '../images/wallet/mobile/wallet-hoo@2x.png';
 import img_hyperpay from '../images/wallet/mobile/wallet-hyperpay@2x.png';
 import img_bitpie from '../images/wallet/mobile/wallet-bitpie@2x.png';
 
+import img_icon_linux from '../images/linux.png';
+
 import img_bystore from '../images/wallet/mobile/extension-bystore@2x.png';
 import img_bepa from '../images/wallet/mobile/wallet-bepapros@2x.png';
 
@@ -35,7 +37,7 @@ export default {
       ]
     },
     {
-      icon: <i className="iconfont icon--linux"></i>,
+      icon: <img src={img_icon_linux} width="23" style={{verticalAlign: '-5px'}} />,
       title: 'Bytom Wallet',
       des: 'for Linux',
       version: 'V 1.0.8',

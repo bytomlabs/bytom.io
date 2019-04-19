@@ -37,7 +37,7 @@ const Cont = css.div`
 const Slide = () => (
   <Wrap>
     <Cont>
-      <h1>Embrace the <span>New era</span> of <br/> Bytom Blockchain</h1>
+      <h1>Embrace the <span>New era</span> of<br/> Bytom Blockchain</h1>
       <p>Create diverse assets and<br/>a programmable economy</p>
     </Cont>
   </Wrap>

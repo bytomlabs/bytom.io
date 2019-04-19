@@ -82,7 +82,7 @@ const Trends = function ({ light=false, style={} }) {
     }
   }, []);
   if(loading) {
-    return <CardWrap>{new Array(6).fill(0).map((item, index) => <Card key={index} loading />)}</CardWrap>;
+    return <CardWrap style={{paddingBottom: 40}}>{new Array(6).fill(0).map((item, index) => <Card key={index} loading />)}</CardWrap>;
   }
 
   return (
