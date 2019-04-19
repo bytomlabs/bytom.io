@@ -82,7 +82,7 @@ export default function Faucet() {
         Please input testnet address which is start from ‘tm’, here is Bytom Wallet official
         <Link to="/wallet"> download </Link>
         and
-        <a href="/wallet"> instruction </a>
+        <a target="_blank" href="https://docs.bytom.io/en-us/docs/10_2_bytom_kit.html"> instruction </a>
       </p>
     </Wrap>
   )

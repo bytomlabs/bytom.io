@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { useState } from 'react';
 import css from 'styled-components';
 
 import Follows from '../components/Follows';
@@ -103,45 +103,72 @@ const Follow = css.div`
     font-size: 12px;
     outline: none;
     border: 0;
+    cursor: pointer;
   }
 `;
+const Msg = css.div`
+  font-size: 12px;
+  font-weight: 400;
+  color: ${props => props.err ? '#E21919' : '#fff'};
+`;
 
-const Footer = ({ siteTitle }) => (
-  <>
-    <Wrap>
-      <Cont>
-        {
-          links.map((item, index) => (
-            <Item key={index}>
-              <h2>{item.title}</h2>
-              <ul>
-                {
-                  item.list.map((sitem, sindex) => (
-                    <li key={sindex}>
-                    {
-                      sitem.disable ? 
-                        <span>{sitem.title}</span>
-                      : <a target="_blank" href={sitem.href || '/'}>{sitem.title}</a>
-                    }
-                    </li>
-                  ))
-                }
-              </ul>
-            </Item>
-          ))
-        }
-        <Item>
-          <h2>Follow us</h2>
-          <Follow>
-            <input type="text"/>
-            <button>Subscribe</button>
-          </Follow>
-          <Follows />
-        </Item>
-      </Cont>
-    </Wrap>
-    <Copy>Copyright ©2019 bytom.io</Copy>
-  </>
-);
+const Footer = ({ siteTitle }) => {
+
+  const [email, handleChange] = useState('');
+  const [isSubscribed, toggleSubscribe] = useState(false);
+  const [isErr, toggleError] = useState(false);
+
+  const handleSubscribe = () => {
+    const pattern = /^([A-Za-z0-9_\-\.\u4e00-\u9fa5])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$/;
+    if(pattern.test(email)){
+      toggleSubscribe(true);
+      toggleError(false);
+      handleChange('')
+    } else {
+      toggleError(true);
+      toggleSubscribe(false);
+    }
+  }
+
+  return (
+    <>
+      <Wrap>
+        <Cont>
+          {
+            links.map((item, index) => (
+              <Item key={index}>
+                <h2>{item.title}</h2>
+                <ul>
+                  {
+                    item.list.map((sitem, sindex) => (
+                      <li key={sindex}>
+                      {
+                        sitem.disable ? 
+                          <span>{sitem.title}</span>
+                        : <a target="_blank" href={sitem.href || '/'}>{sitem.title}</a>
+                      }
+                      </li>
+                    ))
+                  }
+                </ul>
+              </Item>
+            ))
+          }
+          <Item>
+            <h2>Follow us</h2>
+            <Follow>
+              <input value={email} onChange={(e) => handleChange(e.target.value)} type="email"/>
+              <button onClick={handleSubscribe}>Subscribe</button>
+            </Follow>
+            <Follows />
+            { isSubscribed && <Msg>* Thanks for your subscrition.</Msg>}
+            { isErr && <Msg err>* Please input correct mailbox format.</Msg>}
+          </Item>
+        </Cont>
+      </Wrap>
+      <Copy>Copyright ©2019 bytom.io</Copy>
+    </>
+  )
+};
 
 export default Footer;

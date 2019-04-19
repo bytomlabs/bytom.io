@@ -27,7 +27,7 @@ const Btn = css.a`
 `;
 
 export default {
-  help: '/help',
+  help: 'https://docs.bytom.io',
   techList: [
     {
       title: 'Equity',
