@@ -35,7 +35,7 @@ module.exports = {
         name: `Bytom`,
         short_name: `bytom`,
         start_url: `/`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -50,6 +50,15 @@ module.exports = {
         trackingId: "UA-126360547-1",
         head: false,
       },
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/images/favicon.png',
+        icons: {
+          favicons: true,
+        }
+      }
     },
     // {
     //   resolve: 'gatsby-transformer-remark',
