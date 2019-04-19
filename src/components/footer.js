@@ -30,6 +30,7 @@ const links = [
       {title: 'Team', href: '/', disable: true},
       {title: 'Ecosystem', href: '/ecosystem'},
       {title: 'Join', href: '/', disable: true},
+      {title: 'Bytom logo', href: 'http://bytom.oss-cn-hongkong.aliyuncs.com/res/Logo_Bytom_v2.1.zip'},
     ]
   },
   {
