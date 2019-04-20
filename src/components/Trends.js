@@ -7,7 +7,6 @@ import _conf from '../conf/config';
 import ajax from 'axios';
 import { format } from 'date-fns';
 
-
 const Wrap = css.div`
   width: 100%;
   box-sizing: border-box;
@@ -54,49 +53,72 @@ const More = css.div`
   padding: 20px 0 80px;
 `;
 
-const getTimes = (times) => {
+const getTimes = times => {
   let result = '';
-  try{
-    result = format(new Date(+times), 'MMM Do, YYYY')
-  } catch(err) {
+  try {
+    result = format(new Date(+times), 'MMM Do, YYYY');
+  } catch (err) {
     console.log(err);
   }
   return result;
-}
+};
 
-const Trends = function ({ light=false, style={} }) {
+const Trends = function({ light = false, style = {} }) {
   const [loading, setLoading] = useState(true);
   const [news, setNews] = useState([]);
   useEffect(() => {
     const getList = async () => {
       setLoading(true);
       const page_size = light ? 24 : 6;
-      const { data: { data: { list }}} = await ajax.get(_conf.api.news, { params: { page_size, lang: 'en'} });
+      const {
+        data: {
+          data: { list },
+        },
+      } = await ajax.get(_conf.api.news, { params: { page_size, lang: 'en' } });
       setNews(list);
       setLoading(false);
     };
     try {
       getList();
-    } catch (error) {
-      
-    }
+    } catch (error) {}
   }, []);
-  if(loading) {
-    return <CardWrap style={{paddingBottom: 40}}>{new Array(6).fill(0).map((item, index) => <Card key={index} loading />)}</CardWrap>;
+  if (loading) {
+    return (
+      <CardWrap style={{ paddingBottom: 40 }}>
+        {new Array(6).fill(0).map((item, index) => (
+          <Card key={index} loading />
+        ))}
+      </CardWrap>
+    );
   }
 
   return (
     <Wrap>
       <Cont style={style}>
-        { !light && <h1>Trends <Link to="/trends">View more &gt;&gt;</Link></h1>}
+        {!light && (
+          <h1>
+            Trends <Link to="/trends">View more &gt;&gt;</Link>
+          </h1>
+        )}
         <CardWrap>
-          {
-            news.map((item, index) => (
-              <Card style={{ height: 255 }} key={item.id} link={item.link} img={item.image} title={item.title} des={getTimes(item.post_time)} />
-            ))
-          }
+          {news.map((item, index) => (
+            <Card
+              style={{ height: 255 }}
+              key={item.id}
+              link={item.link}
+              img={item.image}
+              title={item.title}
+              des={getTimes(item.post_time)}
+            />
+          ))}
         </CardWrap>
-        { light && <More><a target="_blank" href="https://medium.com/@Bytom_Official">Go to medium &gt;&gt;</a></More> }
+        {light && (
+          <More>
+            <a target="_blank" href="https://medium.com/@Bytom_Official">
+              Go to medium &gt;&gt;
+            </a>
+          </More>
+        )}
       </Cont>
     </Wrap>
   );
