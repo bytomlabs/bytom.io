@@ -20,30 +20,30 @@ export default {
       icon: <i className="iconfont icon--macOS"></i>,
       title: 'Bytom Wallet',
       des: 'for macOS',
-      version: 'V 1.0.8',
+      version: 'V 1.0.9',
       links: [
         null,
-        {title: 'Download', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-mac.zip'}
+        {title: 'Download', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.9/bytom-wallet-desktop-1.0.9-mac.zip'}
       ]
     },
     {
       icon: <i style={{color: '#0079D7'}} className="iconfont icon--windows"></i>,
       title: 'Bytom Wallet',
       des: 'for Wins',
-      version: 'V 1.0.8',
+      version: 'V 1.0.9',
       links: [
-        {title: 'Win32', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-win-ia32.zip'},
-        {title: 'Win64', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-win-x64.zip'},
+        {title: 'Win32', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.9/bytom-wallet-desktop-1.0.9-win-ia32.zip'},
+        {title: 'Win64', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.9/bytom-wallet-desktop-1.0.9-win-x64.zip'},
       ]
     },
     {
       icon: <img src={img_icon_linux} width="23" style={{verticalAlign: '-5px'}} />,
       title: 'Bytom Wallet',
       des: 'for Linux',
-      version: 'V 1.0.8',
+      version: 'V 1.0.9',
       links: [
-        {title: 'Linux32', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-linux-ia32.zip'},
-        {title: 'Linux64', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.8/bytom-wallet-desktop-1.0.8-linux-x64.zip'},
+        {title: 'Linux32', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.9/bytom-wallet-desktop-1.0.9-linux-ia32.zip'},
+        {title: 'Linux64', href: 'https://github.com/Bytom/bytom/releases/download/v1.0.9/bytom-wallet-desktop-1.0.9-linux-x64.zip'},
       ]
     },
     {
@@ -52,8 +52,8 @@ export default {
       des: '',
       version: '',
       links: [
-        {title: 'zip', href: 'https://github.com/Bytom/bytom/archive/v1.0.8.zip'},
-        {title: 'tar.gz', href: 'https://github.com/Bytom/bytom/archive/v1.0.8.tar.gz'},
+        {title: 'zip', href: 'https://github.com/Bytom/bytom/archive/v1.0.9.zip'},
+        {title: 'tar.gz', href: 'https://github.com/Bytom/bytom/archive/v1.0.9.tar.gz'},
       ]
     },
   ],
@@ -97,8 +97,8 @@ export default {
   browserWalletList: [
     {
       img: img_bystore,
-      title: 'Bystore',
-      des: 'Secure & Advanced Bytom Client'
+      title: 'Byone',
+      des: 'Bytom Wallet Chrome extension'
     },
   ],
   hardwareWalletList: [
@@ -112,19 +112,19 @@ export default {
     title: ['Versions', 'Files', 'Checksums(MD5)'],
     width: [null, null, 200],
     data: [
-      ['Bytom Wallet for macOS v1.0.8', 'bytom-wallet-desktop-1.0.8-mac.zip', '08a4ac6290df4659080d38f32d6f46ee'],
-      ['Bytom Wallet for Win 32 v1.0.8', 'bytom-wallet-desktop-1.0.8-win-ia32.zip	', '57d4b1c054c2245ed8f071571fc8d211'],
-      ['Bytom Wallet for Win 64 v1.0.8', 'bytom-wallet-desktop-1.0.8-win-x64.zip', 'd7667979801821e4dbfa475f66d0ac49'],
-      ['Bytom Wallet for Linux 32 v1.0.8', 'bytom-wallet-desktop-1.0.8-linux-ia32.zip', '5a4ed58a6ec1a5c586012f6ac3ac5dab'],
-      ['Bytom Wallet for Linux 64 v1.0.8', 'bytom-wallet-desktop-1.0.8-linux-x64.zip', '202bbe81a2896d74c70267e292a91f72'],
+      ['Bytom Wallet for macOS v1.0.9', 'bytom-wallet-desktop-1.0.9-mac.zip', '16fcaa1b55801c74b31bc0a0282c6bc3'],
+      ['Bytom Wallet for Win 32 v1.0.9', 'bytom-wallet-desktop-1.0.9-win-ia32.zip	', '037408d9e2a923da380781c8345ef244'],
+      ['Bytom Wallet for Win 64 v1.0.9', 'bytom-wallet-desktop-1.0.9-win-x64.zip', '51659d80ebec1745f16ce96b9894c52d'],
+      ['Bytom Wallet for Linux 32 v1.0.9', 'bytom-wallet-desktop-1.0.9-linux-ia32.zip', 'ec21a1abe16314b515dcb0dc5c603e76'],
+      ['Bytom Wallet for Linux 64 v1.0.9', 'bytom-wallet-desktop-1.0.9-linux-x64.zip', 'ac5073f4a563f021e56a746dac0c160e'],
     ],
-    footer: <a href="https://github.com/Bytom/bytom/releases">More versions &gt;&gt;</a>
+    footer: <a target="_blank" href="https://github.com/Bytom/bytom/releases">More versions &gt;&gt;</a>
   },
   fileList: {
     title: ['File', 'Height', 'Size', 'Checksums(MD5)', 'Last update', 'Link'],
     width: [280, 110, 150, 350, 260],
     data: [
-      ['190419-Update.db.zip', '217923', '409.3 MB', 'C84A62C43ABF657CD48DA894B934BB8E', '2019-04-19 08:00:00 (GMT+8)', <a href="https://master.dl.sourceforge.net/project/bytomblockchain/core.db/190419-Update.db.zip">Download</a>],
+      ['190422-Update.db.zip', '219831', '411.8 MB', 'E244A89E6F381F2647CE0CB59D8D40CD', '2019-04-22 16:00:00 (GMT+8)', <a target="_blank" href="https://nchc.dl.sourceforge.net/project/bytomblockchain/core.db/190422-Update.db.zip">Download</a>],
     ],
   },
 };
