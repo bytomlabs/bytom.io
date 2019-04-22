@@ -97,7 +97,7 @@ const Trends = function({ light = false, style = {} }) {
       <Cont style={style}>
         {!light && (
           <h1>
-            Trends <Link to="/trends">View more &gt;&gt;</Link>
+            Trends <Link to="/blog">View more &gt;&gt;</Link>
           </h1>
         )}
         <CardWrap>

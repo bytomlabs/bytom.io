@@ -32,8 +32,8 @@ const Item = css.li`
     margin-right: 8px;
   }
 `;
-export default function ({ tab, children }) {
-  const [ curTabs, changeTabs ] = useState(0);
+export default function ({ tab, children, defaultPanel = 0 }) {
+  const [ curTabs, changeTabs ] = useState(defaultPanel);
   return (
     <>
       <Head>

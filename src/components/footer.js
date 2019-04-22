@@ -20,7 +20,7 @@ const links = [
       {title: 'GitHub', href: 'https://github.com/Bytom/bytom'},
       {title: 'Wiki', href: 'https://docs.bytom.io/'},
       {title: 'Tools', href: '/dev/'},
-      {title: 'Bounty', href: '/dev/bounty'},
+      {title: 'Bounty', href: '/dev', state: {bounty: true}},
     ]
   },
   {
@@ -36,8 +36,8 @@ const links = [
   {
     title: 'Contact',
     list: [
-      {title: 'E-Mail: contact@bytom.io'},
-      {title: 'Website: bytom.io', href: 'https://bytom.io'},
+      {title: 'E-Mail: contact@bytom.io', href: 'mailto:contact@bytom.io'},
+      {title: 'Website: bytom.io', href: '/'},
     ]
   },
 ];
@@ -130,6 +130,13 @@ const Footer = ({ siteTitle }) => {
     }
   }
 
+  const Links = ({ href, title, state={} }) => {
+    const pattern = /^http/;
+    return pattern.test(href) ? 
+        <a target="_blank" href={href || '/'}>{title}</a> 
+      : /^\//.test(href) ? <Link state={state} to={href}>{title}</Link> : <a>{title}</a>;
+  }
+
   return (
     <>
       <Wrap>
@@ -145,7 +152,7 @@ const Footer = ({ siteTitle }) => {
                       {
                         sitem.disable ? 
                           <span>{sitem.title}</span>
-                        : <a target="_blank" href={sitem.href || '/'}>{sitem.title}</a>
+                        : <Links {...sitem} />
                       }
                       </li>
                     ))

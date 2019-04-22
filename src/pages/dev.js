@@ -99,7 +99,7 @@ const Document = () => (
   </DocumentBanner>
 );
 
-const DevPage = () => (
+const DevPage = ({ location }) => (
   <Layout>
     <SEO title="Developer" />
     <Banner>
@@ -119,6 +119,7 @@ const DevPage = () => (
         <span>Tech & Tools</span>,
         <span>Bounties</span>,
       ]}
+      defaultPanel={location.state && location.state.bounty ? 1 : 0}
     >
       <TechWrap>
         <Cont>
