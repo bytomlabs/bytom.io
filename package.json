@@ -2,7 +2,7 @@
   "name": "bytom.io",
   "private": true,
   "description": "Bytom.io homepage",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "author": "@bytom",
   "dependencies": {
     "axios": "^0.18.0",
@@ -32,9 +32,9 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "dev": "gatsby develop -H 0.0.0.0 -p 8000",
+    "develop": "npm run dev",
+    "start": "npm run dev",
+    "dev": "gatsby develop -H 0.0.0.0 -p 8128",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
