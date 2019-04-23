@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import css from 'styled-components';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 import Follows from '../components/Follows';
 
@@ -121,9 +122,15 @@ const Footer = ({ siteTitle }) => {
   const handleSubscribe = () => {
     const pattern = /^([A-Za-z0-9_\-\.\u4e00-\u9fa5])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,8})$/;
     if(pattern.test(email)){
-      toggleSubscribe(true);
+      addToMailchimp(email, {
+        URL: window.location.href
+      }).then((data) => {
+        toggleSubscribe(true);
+        handleChange('');
+      }).catch(err => {
+        console.log(err);
+      })
       toggleError(false);
-      handleChange('')
     } else {
       toggleError(true);
       toggleSubscribe(false);
