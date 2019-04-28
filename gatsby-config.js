@@ -20,13 +20,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `docs`,
-        path: `${__dirname}/src/pages/docs`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -66,6 +59,13 @@ module.exports = {
         endpoint: 'https://gmail.us20.list-manage.com/subscribe/post?u=bbafc8ca5070bf12853c712d4&amp;id=e8aa0dac65'
       }
     },
+    {
+      resolve: 'gatsby-source-yuque',
+      options: {
+        login: 'rainoy',
+        repo: 'blog',
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

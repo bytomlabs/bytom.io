@@ -24,6 +24,8 @@
     "gatsby-source-yuque": "^0.0.7",
     "gatsby-transformer-sharp": "^2.1.17",
     "prop-types": "^15.7.2",
+    "query-string": "^6.4.2",
+    "querystringify": "^2.1.1",
     "react": "^16.8.6",
     "react-content-loader": "^4.2.1",
     "react-dom": "^16.8.5",

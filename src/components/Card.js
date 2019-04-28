@@ -1,6 +1,7 @@
 import React from 'react';
 import css from 'styled-components';
 import CardLoading from './CardLoading';
+import { Link } from 'gatsby';
 
 const Wrap = css.div`
   width: 392px;
@@ -44,23 +45,21 @@ export default function Card({ img, title, des, style, link, exrta, loading=fals
   if(loading) {
     return <CardLoading />;
   }
+  const Cont = () => (
+    <>
+      <img src={img} alt=""/>
+      <h1>{title}</h1>
+      <p>{des}</p>
+      { exrta }
+    </>
+  );
   return (
     <Wrap style={style}>
       {
-        link ? 
-          <a target="_blank" href={link}>
-            <img src={img} alt=""/>
-            <h1>{title}</h1>
-            <p>{des}</p>
-            { exrta }
-          </a>
-        : 
-          <>
-            <img src={img} alt=""/>
-            <h1>{title}</h1>
-            <p>{des}</p>
-            { exrta }
-          </>
+        link ?
+            /^http/.test(link) ? <a href={link}><Cont /></a>
+          : <Link to={link}><Cont /></Link>
+        : <Cont />
       }
     </Wrap>
   )
