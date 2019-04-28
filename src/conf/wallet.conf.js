@@ -61,36 +61,43 @@ export default {
     {
       img: img_anybit,
       title: 'Anybit Wallet',
+      link: 'https://www.anybit.io/',
       des: 'Your Mobile crypto Manager'
     },
     {
       img: img_bepal,
       title: 'Bepal Wallet',
+      link: 'https://www.bepal.pro/Download',
       des: 'Safe and easy to use with attractive interface'
     },
     {
       img: img_bitpie,
       title: 'Bitpie Wallet',
+      link: 'https://bitpie.com',
       des: 'Industry-leading multi-blockchain wallet'
     },
     {
       img: img_bixin,
       title: 'Binxin Wallet',
+      link: 'https://bixin.com',
       des: 'Blockchain in your pocket'
     },
     {
       img: img_bycoin,
       title: 'Bycoin Wallet',
+      link: 'http://bycoin.im',
       des: 'Professional digital assets management platform'
     },
     {
       img: img_hoo,
       title: 'Hoo Wallet',
-      des: ''
+      link: 'https://hoo.com',
+      des: 'Use Hoo to achieve your ambition'
     },
     {
       img: img_hyperpay,
       title: 'Hyperpay Wallet',
+      link: 'https://hyperpay.me/download',
       des: 'The bastion of wallet security, watch your assets…'
     },
   ],
@@ -98,6 +105,7 @@ export default {
     {
       img: img_bystore,
       title: 'Byone',
+      link: 'https://chrome.google.com/webstore/detail/bystore/nlgbhdfgdhgbiamfdfmbikcdghidoadd',
       des: 'Bytom Wallet Chrome extension'
     },
   ],
@@ -105,6 +113,7 @@ export default {
     {
       img: img_bepa,
       title: 'Bepa Pro S',
+      link: 'https://www.bepal.pro/bepal-pro-s',
       des: 'Focusing on the safety of blockchain'
     },
   ],
