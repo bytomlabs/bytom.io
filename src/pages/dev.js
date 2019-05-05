@@ -17,7 +17,7 @@ import img_bg from '../images/wallet/bg.png';
 import img_banner_bg from '../images/bgv.png';
 
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   margin: 0 auto;
 `;
 const BannerWrap = css.div`

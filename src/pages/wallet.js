@@ -40,7 +40,7 @@ const Wrap = css.div`
   background:  #fff url(${img_bg}) center top / cover no-repeat;
 `;
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   margin: 0 auto;
 `;
 const Download = css.div`
@@ -160,7 +160,7 @@ const SubBanner = css.div`
   margin-top: 76px;
 `;
 const CardWrap = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   // height: 897px;
   margin: 0 auto;
   display: flex;

@@ -117,10 +117,18 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  min-width: 1280px;
   font-size: 14px;
   letter-spacing: 1px;
   background-color: #f8f8f8;
   font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@media (max-width: 640px) {
+  body{
+    max-width: 100%;
+    min-width: 100vw;
+    overflow-x: hidden;
+  }
 }
 h1, h2, h3{
   letter-spacing: 1.5px;
@@ -147,7 +155,8 @@ ol,ul {
 
 a {
   color: #1656ce;
-  text-decoration: none
+  text-decoration: none;
+  cursor: pointer;
 }
 
 i {

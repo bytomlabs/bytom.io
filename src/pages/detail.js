@@ -11,7 +11,7 @@ import SEO from '../components/seo';
 
 
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   margin: 0 auto;
   padding: 60px 0 80px;
 `;

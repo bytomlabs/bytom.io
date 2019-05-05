@@ -27,13 +27,19 @@ const PageDesc = css.p`
   font-weight: 300;
   padding-top: 190px;
   margin-bottom: 20px;
+  @media (max-width: 640px) {
+    padding: 102px 26px 0 26px;
+    color: #b3b3b3;
+    font-size: 14px;
+    line-height: 2em;
+  }
 `;
 const Follow = css.div`
   width: 300px;
   margin: 0 auto;
 `;
 const CardWrap = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
