@@ -43,6 +43,9 @@ const Wrap = css.div`
     line-height: 26px !important;
     margin-top: 10px !important;
   }
+  @media (max-width: 640px) {
+    display: none;
+  }
 `;
 const ErrMsg = css.span`
   font-size: 12px;
