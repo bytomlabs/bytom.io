@@ -12,6 +12,15 @@ const Wrap = css.div`
     height: 260px;
     background-color: #B3B3B3;
   }
+  @media (max-width: 640px) {
+    width: 100%;
+    box-sizing: border-box;
+    height: 270px;
+    img{
+      height: 146px !important;
+    }
+    margin-bottom: 20px;
+  }
 `;
 const Cont = css.div`
   height: 104px;
@@ -42,6 +51,23 @@ const Cont = css.div`
     text-overflow: ellipsis;
     -webkit-line-clamp: 3; 
     -webkit-box-orient: vertical;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    height: 124px;
+    left: 0;
+    bottom:0;
+    h1{
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    p{
+      width: auto;
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 `;
 

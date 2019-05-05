@@ -24,6 +24,13 @@ const Btn = css.a`
     border: none;
     background: linear-gradient(90deg,rgba(3,91,212,1) 0%,rgba(62,143,255,1) 100%);
   }
+  @media (max-width: 640px) {
+    width: 180px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    margin: 10px 0;
+  }
 `;
 
 export default {
