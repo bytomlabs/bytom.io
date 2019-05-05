@@ -49,6 +49,11 @@ const Wrap = css.div`
   padding: 100px 0;
   position: relative;
   background: #f8f8f8 url(${img_bg}) center top / cover no-repeat;
+  @media (max-width: 640px) {
+    padding: 30px 16px;
+    height: auto;
+    box-sizing: border-box;
+  }
 `;
 const Bg = css.div`
   position: absolute;
@@ -57,12 +62,21 @@ const Bg = css.div`
   height: 520px;
   margin-right: -290px;
   background-color: #fff;
+  @media (max-width: 640px) {
+    display: none;
+  }
 `;
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   height: 100%;
   position: relative;
+  @media (max-width: 640px) {
+    width: 100%;
+    div,p,ul,span{
+      position: static !important;
+    }
+  }
 `;
 const Video = css.div`
   width: 604px;
@@ -75,6 +89,11 @@ const Video = css.div`
     width: 100%;
     height: 100%;
     outline: none;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+    position: static;
+    height: 194px;
   }
 `;
 const Title = css.div`
@@ -94,6 +113,14 @@ const List = css.ul`
   position: absolute;
   width: 600px;
   top: 310px;
+  @media (max-width: 640px) {
+    width: 100%;
+    position: static;
+    margin: 20px 0;
+    li{
+      width: 100%;
+    }
+  }
 `;
 const Item = css.li`
   width: 50%;
@@ -126,6 +153,10 @@ const Desc = css.p`
   position: absolute;
   top: 170px;
   width: 500px;
+  @media (max-width: 640px) {
+    width: 100%;
+    margin: 20px 0;
+  }
 `;
 const Line = css.span`
   display: inline-block;
@@ -153,7 +184,7 @@ const SectionVideo = ({ info }) => {
         <Title>{info.title} <span>{info.subTitle}</span></Title>
         <Desc>{info.desc}</Desc>
         <Line />
-        <List>
+        <List className="clearfix">
           {
             list.map((item, index) => (
               <Item img={item.img} key={index}>

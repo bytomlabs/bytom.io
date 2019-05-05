@@ -8,18 +8,31 @@ const Wrap = css.div`
   width: 100%;
   height: 640px;
   box-sizing: border-box;
+  @media (max-width: 640px) {
+    height: auto;
+  }
 `;
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   height: 100%;
   margin: 0 auto;
   padding: 100px 0;
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 30px 16px 10px 16px;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
 `;
 const Img = css.img`
   width: 710px;
   height: 440px;
   display: inline-block;
   vertical-align: top;
+  @media (max-width: 640px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 const Msg = css.div`
   display: inline-block;
@@ -41,6 +54,17 @@ const Msg = css.div`
     margin-top: 56px;
     line-height: 28px;
     font-weight: 400;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+    margin: 20px 0;
+    h1{
+      font-size: 24px;
+      line-height: 36px;
+    }
+    p{
+      margin-top: 20px;
+    }
   }
 `;
 const SectionBytom = ({ info }) => (

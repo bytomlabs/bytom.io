@@ -16,7 +16,10 @@ import _conf from '../conf/home.conf';
 console.log(_conf.features)
 const IndexPage = () => (
   <Layout>
-    <SEO title="Bytom Blockchain" keywords={[`bytom`, `btm`, `比原链`]} />
+    <SEO
+      title="Bytom Blockchain"
+      keywords={[`bytom`, `btm`, `比原链`]}
+    />
     <Slide></Slide>
     <DesBar features={_conf.features} />
     <SectionVideo info={_conf.videoInfo}></SectionVideo>
