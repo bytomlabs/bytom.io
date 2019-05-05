@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import css from 'styled-components';
+import device from 'current-device';
 
 import _conf from '../conf/dev.conf';
 
@@ -19,6 +20,11 @@ import img_banner_bg from '../images/bgv.png';
 const Cont = css.div`
   width: 1280px;;
   margin: 0 auto;
+  @media (max-width: 640px) {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
 `;
 const BannerWrap = css.div`
   display: flex;
@@ -39,6 +45,16 @@ const BannerWrap = css.div`
       font-weight: 300;
       line-height: 32px;
       color: #B3B3B3;
+    }
+  }
+  @media (max-width: 640px) {
+    padding: 100px 16px;
+    text-align: center;
+    h1{
+      font-size: 32px !important;
+    }
+    p{
+      font-size: 14px !important;
     }
   }
 `;
@@ -64,7 +80,7 @@ const TabsCont = css.div`
 const DocumentBanner = css.div`
   width: 100%;
   height: 280px;
-  background: url(${img_banner_bg}) center / 100% no-repeat;
+  background: url(${img_banner_bg}) center / cover no-repeat;
   h1{
     text-align: center;
     color: #000;
@@ -84,12 +100,57 @@ const DocumentBanner = css.div`
     font-weight: bold;
     margin: 0 auto;
   }
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 24px;
+    }
+  }
 `;
 const SubTitle = css.h1`
   font-size: 28px;
   color: #282828;
   line-height: 1em;
   margin: 40px 0;
+`;
+const MobileCardWrap = css.div`
+  display: flex;
+  height: 114px;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow:0px 2px 4px rgba(0,0,0,0.04);
+  img{
+    width: 114px;
+    height: 114px;
+  }
+  &>a{
+    h1{
+      color: #1c1c1c;
+      font-size: 16px;
+      line-height: 1.8em;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    p{
+      color: #b3b3b3;
+      font-size: 12px;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+  &>a:last-child{
+    display: flex;
+    padding-left: 20px;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
 `;
 
 const Document = () => (
@@ -98,6 +159,19 @@ const Document = () => (
     <a href={_conf.help}>View more</a>
   </DocumentBanner>
 );
+
+const MobileCard = ({title, img, link, des, exrta}) => (
+  <MobileCardWrap>
+    <a href={link}>
+      <img src={img} alt=""/>
+    </a>
+    <a href={link}>
+      <h1>{title}</h1>
+      <p>{des}</p>
+      {exrta}
+    </a>
+  </MobileCardWrap>
+)
 
 const DevPage = ({ location }) => (
   <Layout>
@@ -135,7 +209,11 @@ const DevPage = ({ location }) => (
           <SubTitle>Development Tools</SubTitle>
           <TabsCont>
             {
-              _conf.toolsList.map((item, index) => <Card style={{width: 286, marginBottom: 40}} key={index} {...item} />)
+              _conf.toolsList.map((item, index) => (
+                device.type === 'mobile' ? 
+                  <MobileCard key={index} {...item} /> : 
+                  <Card style={{width: 286, marginBottom: 40}} key={index} {...item} />
+              ))
             }
             <div style={{width: 392}}></div>
           </TabsCont>
@@ -146,9 +224,13 @@ const DevPage = ({ location }) => (
         <Cont>
           <SubTitle>Minority Report</SubTitle>
           <TabsCont>
-            {
-              _conf.bountyList.map((item, index) => <Card style={{marginBottom: 40, width: 286}} key={index} {...item} />)
-            }
+          {
+            _conf.bountyList.map((item, index) => (
+              device.type === 'mobile' ? 
+                <MobileCard key={index} {...item} /> : 
+                <Card style={{width: 286, marginBottom: 40}} key={index} {...item} />
+            ))
+          }
           </TabsCont>
         </Cont>
         <Document />
@@ -156,7 +238,11 @@ const DevPage = ({ location }) => (
           <SubTitle>Long Term</SubTitle>
           <TabsCont>
             {
-              _conf.langTermList.map((item, index) => <Card style={{marginBottom: 40, width: 286}} key={index} {...item} />)
+              _conf.langTermList.map((item, index) => (
+                device.type === 'mobile' ? 
+                  <MobileCard key={index} {...item} /> : 
+                  <Card style={{width: 286, marginBottom: 40}} key={index} {...item} />
+              ))
             }
             <div style={{width: 392}}></div>
           </TabsCont>
