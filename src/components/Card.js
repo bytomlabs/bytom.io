@@ -39,6 +39,9 @@ const Wrap = css.div`
     overflow: hidden;
     white-space: nowrap;
   }
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 `;
 
 export default function Card({ img, title, des, style, link, exrta, loading=false }) {

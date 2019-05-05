@@ -7,17 +7,24 @@ const Wrap = css.div`
   background: #fff;
 `;
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   height: 100%;
   margin: 0 auto;
-  ul{
-    padding: 30px 0;
+  @media (max-width: 640px) {
+    width: 100%;
   }
 `;
 const Item = css.li`
   width: 33%;
-  display: block;
+  display: flex;
   float: left;
+  padding: 30px 10px;
+  box-sizing: border-box;
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 20px 10px;
+    border-bottom: 0.5px solid #f5f5f5;
+  }
 `;
 const Img = css.img`
   width: 82px;
@@ -27,9 +34,8 @@ const Img = css.img`
   margin-right: 20px;
 `;
 const Msg = css.span`
-  display: inline-block;
-  vertical-align: top;
-  width: 288px;
+  display: block;
+  padding-right: 20px;
   h1{
     font-size: 20px;
     font-weight: bold;

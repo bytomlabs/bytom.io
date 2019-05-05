@@ -8,9 +8,12 @@ const Wrap = css.div`
   width: 100%;
   height: 560px;
   background: #000 url(${img_banner}) center top / cover no-repeat;
+  @media (max-width: 640px) {
+    height: 440px;  
+  }
 `;
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;
   height: 100%;
   margin: 0 auto;
   color: #fff;
@@ -32,6 +35,19 @@ const Cont = css.div`
     font-weight: 300;
     font-size: 20px;
     line-height: 36px;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+    height: 440px;  
+    h1{
+      padding: 118px 40px 0 40px;
+      line-height: 48px;
+      font-size: 32px;
+    }
+    P{
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 `;
 const Slide = () => (

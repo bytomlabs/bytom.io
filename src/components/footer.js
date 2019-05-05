@@ -48,13 +48,25 @@ const Wrap = css.div`
   height: 305px;
   box-sizing: border-box;
   background-color: #1C1C1C;
+  @media (max-width: 640px) {
+    height: 130px;
+    box-sizing: border-box;
+  }
 `;
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   height: 305px;
   margin: 0 auto;
   display: flex;
   padding: 60px 0;
+  @media (max-width: 640px) {
+    width: 100%;
+    height: auto;
+    padding: 10px 60px;
+    &>div:not(:last-child){
+      display: none;
+    }
+  }
 `;
 const Item = css.div`
   width: 20%;
@@ -73,6 +85,12 @@ const Item = css.div`
     }
     a{
       color: #fff;
+    }
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+    h2{
+      display: none;
     }
   }
 `;
@@ -106,11 +124,23 @@ const Follow = css.div`
     border: 0;
     cursor: pointer;
   }
+  @media (max-width: 640px) {
+    display: none;
+  }
 `;
 const Msg = css.div`
   font-size: 12px;
   font-weight: 400;
   color: ${props => props.err ? '#E21919' : '#fff'};
+`;
+const MobileInfo = css.section`
+  color: #fff;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+  @media (min-width: 640px) {
+    display: none;
+  }
 `;
 
 const Footer = ({ siteTitle }) => {
@@ -177,6 +207,10 @@ const Footer = ({ siteTitle }) => {
             <Follows />
             { isSubscribed && <Msg>* Thanks for your subscrition.</Msg>}
             { isErr && <Msg err>* Please input correct mailbox format.</Msg>}
+            <MobileInfo>
+              <p>E-Mail: contact@bytom.io</p>
+              <p>Website: bytom.io</p>
+            </MobileInfo>
           </Item>
         </Cont>
       </Wrap>

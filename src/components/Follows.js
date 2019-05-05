@@ -12,6 +12,9 @@ const Wrap = css.ul`
       &:hover{
         color: #fff;
       }
+      @media (max-width: 640px) {
+        color: #fff;
+      }
     }
   }
 `;

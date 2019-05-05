@@ -13,7 +13,7 @@ const Wrap = styled.div`
   top: 0;
 `;
 const Cont = styled.ul` 
-  max-width: 1280px; 
+  width: 1280px;; 
   height: 100%;
   margin: 0 auto;
   display:flex;
@@ -38,7 +38,7 @@ const List = styled.div`
       background:#fff;
     }
     .content{
-    max-width: 1280px; 
+    width: 1280px;; 
     height: 100%;
     margin: 0 auto;
     }

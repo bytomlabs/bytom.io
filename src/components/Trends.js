@@ -12,7 +12,7 @@ const Wrap = css.div`
   box-sizing: border-box;
 `;
 const Cont = css.div`
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
   padding: 60px 0 80px;
   &>h1{
@@ -25,27 +25,27 @@ const Cont = css.div`
       float: right;
     }
   }
-`;
-const Loading = css.div`
-  width: 100%;
-  height: 550px;
-  text-align: center;
-  line-height: 550px;
-  &:after{
-    content: 'loading';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+  @media (max-width: 640px) {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 16px !important;
   }
 `;
 const CardWrap = css.div`
-  max-width: 1280px;
+  width: 1280px;;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   &>div{
     margin-top: 40px;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+    box-sizing: border-box;
+    &>div:nth-child(n+${props => props.isLight ? 11 : 4}){
+      display: none;
+    }
   }
 `;
 const More = css.div`
@@ -84,11 +84,13 @@ const Trends = function({ light = false, style = {} }) {
   }, []);
   if (loading) {
     return (
-      <CardWrap style={{ paddingBottom: 40 }}>
-        {new Array(6).fill(0).map((item, index) => (
-          <Card key={index} loading />
-        ))}
-      </CardWrap>
+      <Cont>
+        <CardWrap style={{ paddingBottom: 40 }}>
+          {new Array(6).fill(0).map((item, index) => (
+            <Card key={index} loading />
+          ))}
+        </CardWrap>
+      </Cont>
     );
   }
 
@@ -100,7 +102,7 @@ const Trends = function({ light = false, style = {} }) {
             Trends <Link to="/blog">View more &gt;&gt;</Link>
           </h1>
         )}
-        <CardWrap>
+        <CardWrap isLight={light}>
           {news.map((item, index) => (
             <Card
               style={{ height: 255 }}
