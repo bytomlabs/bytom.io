@@ -5,6 +5,10 @@ import css from 'styled-components';
 const Wrap = css.div`
   width: 1280px;;
   margin: 0 auto;
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 0 16px;
+  }
 `;
 const Cont = css.div`
   margin: 0 auto;
@@ -15,6 +19,10 @@ const Head = css.ul`
   height: 72px;
   background-color: #fff;
   line-height: 72px;
+  @media (max-width: 640px) {
+    height: 40px;
+    line-height: 40px;
+  }
 `;
 const Item = css.li`
   float: left;
@@ -25,11 +33,14 @@ const Item = css.li`
   font-weight: bold;
   cursor: pointer;
   border-bottom: 3px solid ${(props) => props.isCur ? '#035BD4 ' : '#fff '};
-  height: 72px;
+  height: 100%;
   transition:all .4s;
   box-sizing: border-box;
   i{
     margin-right: 8px;
+  }
+  @media (max-width: 640px) {
+    font-size: 14px;
   }
 `;
 export default function ({ tab, children, defaultPanel = 0 }) {

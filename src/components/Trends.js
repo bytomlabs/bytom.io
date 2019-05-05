@@ -46,11 +46,17 @@ const CardWrap = css.div`
     &>div:nth-child(n+${props => props.isLight ? 11 : 4}){
       display: none;
     }
+    &>div:first-child{
+      margin-top: 0;
+    }
   }
 `;
 const More = css.div`
   text-align: right;
   padding: 20px 0 80px;
+  @media (max-width: 640px) {
+    padding: 30px 0 0;
+  }
 `;
 
 const getTimes = times => {

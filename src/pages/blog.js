@@ -11,14 +11,6 @@ import Card from '../components/Card';
 import Follows from '../components/Follows';
 import TrendsList from '../components/Trends';
 
-
-const PageTitle = css.h1`
-  font-size: 44px;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  padding-top: 195px;
-`;
 const PageDesc = css.p`
   font-size: 24px;
   color: #fff;
@@ -37,16 +29,6 @@ const PageDesc = css.p`
 const Follow = css.div`
   width: 300px;
   margin: 0 auto;
-`;
-const CardWrap = css.div`
-  width: 1280px;;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  &>div{
-    margin-top: 40px;
-  }
 `;
 
 export default function Blog() {
