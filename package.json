@@ -2,7 +2,7 @@
   "name": "bytom.io",
   "private": true,
   "description": "Bytom.io homepage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "@bytom",
   "dependencies": {
     "axios": "^0.18.0",
