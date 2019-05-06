@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import css from 'styled-components';
-import device from 'current-device';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -19,6 +18,10 @@ import img_logo from '../images/wallet/logo.png';
 import img_step from '../images/wallet/step.png';
 import img_sub_banner from '../images/wallet/bannerWallet.png';
 
+let isMobile = false;
+if(window){
+  isMobile = document.documentElement.clientWidth <= 640;
+}
 
 const Title = css.h1`
   font-size: 54px;
@@ -305,7 +308,7 @@ const WalletPage = () => (
       <SubBanner />
       <Tabs
           tab={
-            device.type === 'mobile' ? 
+            isMobile ? 
               [
                 <span>Mobile</span>,
                 <span>Browser Extension</span>,

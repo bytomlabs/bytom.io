@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import css from 'styled-components';
-import device from 'current-device';
 
 import _conf from '../conf/dev.conf';
 
@@ -16,6 +15,11 @@ import ImgCard from '../components/ImgCard';
 import img_dev from '../images/dev/dev.png';
 import img_bg from '../images/wallet/bg.png';
 import img_banner_bg from '../images/bgv.png';
+
+let isMobile = false;
+if(window){
+  isMobile = document.documentElement.clientWidth <= 640;
+}
 
 const Cont = css.div`
   width: 1280px;;
@@ -210,7 +214,7 @@ const DevPage = ({ location }) => (
           <TabsCont>
             {
               _conf.toolsList.map((item, index) => (
-                device.type === 'mobile' ? 
+                isMobile ? 
                   <MobileCard key={index} {...item} /> : 
                   <Card style={{width: 286, marginBottom: 40}} key={index} {...item} />
               ))
@@ -226,7 +230,7 @@ const DevPage = ({ location }) => (
           <TabsCont>
           {
             _conf.bountyList.map((item, index) => (
-              device.type === 'mobile' ? 
+              isMobile ? 
                 <MobileCard key={index} {...item} /> : 
                 <Card style={{width: 286, marginBottom: 40}} key={index} {...item} />
             ))
@@ -239,7 +243,7 @@ const DevPage = ({ location }) => (
           <TabsCont>
             {
               _conf.langTermList.map((item, index) => (
-                device.type === 'mobile' ? 
+                isMobile ? 
                   <MobileCard key={index} {...item} /> : 
                   <Card style={{width: 286, marginBottom: 40}} key={index} {...item} />
               ))
