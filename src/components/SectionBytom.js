@@ -19,9 +19,11 @@ const Cont = css.div`
   padding: 100px 0;
   @media (max-width: 640px) {
     width: 100%;
-    padding: 30px 16px 10px 16px;
+    padding: 10px 16px 30px 16px;
     box-sizing: border-box;
     background-color: #fff;
+    display: flex;
+    flex-direction: column-reverse;
   }
 `;
 const Img = css.img`

@@ -29,6 +29,14 @@ const Cont = css.div`
     width: 100%;
     box-sizing: border-box;
     padding: 30px 16px !important;
+    &>h1{
+      padding-bottom: 20px;
+      font-size: 24px;
+      a{
+        line-height: 2em;
+        font-size: 12px;
+      }
+    }
   }
 `;
 const CardWrap = css.div`
@@ -43,11 +51,24 @@ const CardWrap = css.div`
   @media (max-width: 640px) {
     width: 100%;
     box-sizing: border-box;
+    &>div{
+      height: auto !important;
+      margin-top: 20px !important;
+    }
     &>div:nth-child(n+${props => props.isLight ? 11 : 4}){
       display: none;
     }
     &>div:first-child{
-      margin-top: 0;
+      margin-top: 0 !important;
+    }
+    h1{
+      font-size: 15px;
+      padding: 12px 12px 8px 12px;
+    }
+    p{
+      font-size: 12px;
+      height: 24px;
+      padding: 0 12px;
     }
   }
 `;

@@ -52,7 +52,7 @@ const Button = css(Link)`
     color: #000;
   }
   @media (max-width: 640px) {
-    width: 145px;
+    width: 160px;
     height: 32px;
     line-height: 32px;
     font-size: 12px;

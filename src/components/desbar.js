@@ -23,7 +23,7 @@ const Item = css.li`
   @media (max-width: 640px) {
     width: 100%;
     padding: 20px 10px;
-    border-bottom: 0.5px solid #f5f5f5;
+    border-bottom: 0.5px solid #eae8e8;
   }
 `;
 const Img = css.img`
