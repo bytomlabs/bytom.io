@@ -111,7 +111,7 @@ const Trends = function({ light = false, style = {} }) {
   }, []);
   if (loading) {
     return (
-      <Cont>
+      <Cont style={style}>
         <CardWrap style={{ paddingBottom: 40 }}>
           {new Array(6).fill(0).map((item, index) => (
             <Card key={index} loading />
