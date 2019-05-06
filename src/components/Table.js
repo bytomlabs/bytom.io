@@ -33,6 +33,9 @@ const Table = css.table`
       color: #fff;
     }
   }
+  @media (max-width: 640px) {
+    display: none;
+  }
 `;
 const Footer = css.div`
   height: 60px;
@@ -40,6 +43,9 @@ const Footer = css.div`
   text-align: right;
   font-size: 16px;
   border-bottom: 1px solid #E3E3E3;
+  @media (max-width: 640px) {
+    display: none;
+  }
 `;
 export default ({ data }) => (
   <>
