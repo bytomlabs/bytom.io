@@ -41,6 +41,8 @@ const Item = css.li`
   }
   @media (max-width: 640px) {
     font-size: 14px;
+    margin: 0;
+    padding: 0 15px;
   }
 `;
 export default function ({ tab, children, defaultPanel = 0 }) {

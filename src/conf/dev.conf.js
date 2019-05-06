@@ -28,7 +28,7 @@ const Btn = css.a`
     width: 180px;
     height: 32px;
     line-height: 32px;
-    font-size: 16px;
+    font-size: 12px;
     margin: 10px 0;
   }
 `;

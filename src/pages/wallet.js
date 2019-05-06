@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import css from 'styled-components';
+import device from 'current-device';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -26,22 +27,40 @@ const Title = css.h1`
   line-height: 1em;
   color: #fff;
   padding: 172px 0 72px 0;
+  @media (max-width: 640px) {
+    font-size: 32px;
+    line-height: 1.5em;
+    padding: 70px 30px 66px 30px;
+  }
 `;
 const Img = css.img`
   display: block;
   width: 1028px;
   height: 262px;
   margin: 0 auto;
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 0 16px;
+    height: 88px;
+  }
 `;
 const Wrap = css.div`
   width: 100%;
   height: auto;
   padding: 80px 0;
   background:  #fff url(${img_bg}) center top / cover no-repeat;
+  @media (max-width: 640px) {
+    padding: 0;
+  }
 `;
 const Cont = css.div`
-  width: 1280px;;
+  width: 1280px;
   margin: 0 auto;
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
 `;
 const Download = css.div`
   display: flex;
@@ -74,12 +93,34 @@ const Download = css.div`
         display: inline-block;
       }
     }
+    table{
+      @media (max-width: 640px) {
+        display: none;
+      }
+    }
     p{
       font-size: 16px;
       color: #666;
       margin-top: 6px;
       line-height: 28px;
       font-weight: 400;
+    }
+    @media (max-width: 640px) {
+      width: 100%;
+      height: auto;
+      h1{
+        font-size: 18px;
+      }
+      p{
+        margin: 12px 0;
+      }
+    }
+  }
+  @media (max-width: 640px) {
+    flex-direction: column-reverse;
+    &>img{
+      width: 100%;
+      height: auto;
     }
   }
 `;
@@ -121,6 +162,9 @@ const Table = css.table`
       border-color: #3E8FFF;
     }
   }
+  @media (max-width: 640px) {
+    display: none;
+  }
 `;
 const Step = css.div`
   display: flex;
@@ -152,15 +196,23 @@ const Step = css.div`
       }
     }
   }
+  @media (max-width: 640px) {
+    display: none;
+  }
 `;
 const SubBanner = css.div`
   background: url(${img_sub_banner}) center / cover no-repeat;
   width: 100%;
   height: 280px;
   margin-top: 76px;
+  @media (max-width: 640px) {
+    margin-top: 20px;
+    height: 158px;
+    background: url(${img_sub_banner}) 33% / cover no-repeat;
+  }
 `;
 const CardWrap = css.div`
-  width: 1280px;;
+  width: 1280px;
   // height: 897px;
   margin: 0 auto;
   display: flex;
@@ -168,6 +220,26 @@ const CardWrap = css.div`
   justify-content: space-between;
   &>div{
     margin-top: 40px;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+    padding: 0 16px 30px 16px;
+    box-sizing: border-box;
+    &>div{
+      margin-top: 20px;
+      width: 48%;
+    }
+    p{
+      display: none;
+    }
+    img{
+      height: auto;
+    }
+    h1{
+      font-size: 12px;
+      font-weight: bold;
+      padding: 8px;
+    }
   }
 `;
 
@@ -233,11 +305,18 @@ const WalletPage = () => (
       <SubBanner />
       <Tabs
           tab={
-            [
-              <span>Mobile Wallet</span>,
-              <span>Browser Extension</span>,
-              <span>Hardware Wallet</span>,
-            ]
+            device.type === 'mobile' ? 
+              [
+                <span>Mobile</span>,
+                <span>Browser Extension</span>,
+                <span>Hardware</span>,
+              ]
+            : 
+              [
+                <span>Mobile Wallet</span>,
+                <span>Browser Extension</span>,
+                <span>Hardware Wallet</span>,
+              ]
           }
         >
           <CardWrap>
@@ -250,14 +329,14 @@ const WalletPage = () => (
           <CardWrap>
             {
               _conf.browserWalletList.map((item, index) => (
-                <Card style={{ height: 259 }} key={index} {...item} />
+                <Card key={index} {...item} />
               ))
             }
           </CardWrap>
           <CardWrap>
             {
               _conf.hardwareWalletList.map((item, index) => (
-                <Card style={{ height: 259 }} key={index} {...item} />
+                <Card key={index} {...item} />
               ))
             }
           </CardWrap>
