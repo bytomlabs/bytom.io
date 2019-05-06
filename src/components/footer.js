@@ -30,8 +30,8 @@ const links = [
       // {title: 'About', href: '/'},
       {title: 'Team', href: '/', disable: true},
       {title: 'Ecosystem', href: '/ecosystem'},
-      {title: 'Join', href: '/', disable: true},
-      {title: 'Bytom logo', href: 'http://bytom.oss-cn-hongkong.aliyuncs.com/res/Logo_Bytom_v2.1.zip'},
+      {title: 'White Paper', href: 'https://bycoin.oss-cn-shanghai.aliyuncs.com/bytom/bytom.io/BytomWhitePaperV1.0_En.pdf'},
+      {title: 'Bytom Logo', href: 'http://bytom.oss-cn-hongkong.aliyuncs.com/res/Logo_Bytom_v2.1.zip'},
     ]
   },
   {
