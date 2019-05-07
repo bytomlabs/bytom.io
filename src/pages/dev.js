@@ -17,7 +17,7 @@ import img_bg from '../images/wallet/bg.png';
 import img_banner_bg from '../images/bgv.png';
 
 let isMobile = false;
-if(window){
+if(typeof window !== `undefined`){
   isMobile = document.documentElement.clientWidth <= 640;
 }
 

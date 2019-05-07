@@ -19,7 +19,7 @@ import img_step from '../images/wallet/step.png';
 import img_sub_banner from '../images/wallet/bannerWallet.png';
 
 let isMobile = false;
-if(window){
+if(typeof window !== `undefined`){
   isMobile = document.documentElement.clientWidth <= 640;
 }
 

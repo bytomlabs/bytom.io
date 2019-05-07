@@ -62,8 +62,8 @@ const CardWrap = css.div`
       margin-top: 0 !important;
     }
     h1{
-      font-size: 15px;
-      padding: 12px 12px 8px 12px;
+      font-size: 15px !important;
+      padding: 12px 12px 8px 12px !important;
     }
     p{
       font-size: 12px;
