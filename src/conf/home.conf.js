@@ -19,7 +19,7 @@ export default {
     {
       img: img_icon_des2,
       title: 'Flexible',
-      cont: 'Customize Your Smart contract, completely control assets, power the future of the econmy.'
+      cont: 'Customize Your Smart contract, completely control assets, power the future of the economy.'
     },
     {
       img: img_icon_des3,

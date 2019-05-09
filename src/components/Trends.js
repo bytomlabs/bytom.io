@@ -66,9 +66,9 @@ const CardWrap = css.div`
       padding: 12px 12px 8px 12px !important;
     }
     p{
-      font-size: 12px;
-      height: 24px;
-      padding: 0 12px;
+      font-size: 12px !important;
+      height: 24px !important;
+      padding: 0 12px !important;
     }
   }
 `;
