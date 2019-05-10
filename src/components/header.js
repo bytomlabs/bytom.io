@@ -160,6 +160,9 @@ const Header = ({ siteTitle, light }) => {
               </MobileNavItem>
             ))
           }
+          <MobileNavItem light={light ? 'true' : 'false'} key={'10'}>
+            <Link activeClassName="active" to='/team'>Team</Link>
+          </MobileNavItem>
         </MobileNav>
         <Toolbar>
           <Github light={light ? 'true' : 'false'} target="_blank" href="https://github.com/Bytom/bytom" className="iconfont github" />
