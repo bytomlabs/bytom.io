@@ -4,12 +4,14 @@ import css from 'styled-components';
 import _conf from '../conf/config'
 
 import img_logo from '../images/logo.png';
+import img_logo_light from '../images/logo_light.png';
 import img_m_menu from '../images/m.menu.png';
+import img_m_menu_light from '../images/m.menu.light.png';
 
 const Wrap = css.div`
   width: 100%;
   height: 80px;
-  background-color: #000;
+  background-color: ${props => props.light === 'true' ? '#fff' : '#000'};
   @media (max-width: 640px) {
     height: 60px;
   }
@@ -29,7 +31,7 @@ const Logo = css(Link)`
   display: inline-block;
   width: 130px;
   height: 100%;
-  background: url(${img_logo}) center left / 130px no-repeat;
+  background: url(${props => props.light === 'true' ? img_logo_light : img_logo}) center left / 130px no-repeat;
 `;
 
 const Nav = css.ul`
@@ -47,7 +49,7 @@ const NavItem = css.ul`
   padding: 0 20px;
   line-height: 80px;
   a{
-    color: #fff;
+    color: ${props => props.light === 'true' ? '#000' : '#fff'};
     &:hover{
       color: #035BD4;
     }
@@ -73,10 +75,10 @@ const Github = css.a`
   display: inline-block;
   cursor: pointer;
   &:hover{
-    color: #fff;
+    color: ${props => props.light === 'true' ? '#000' : '#fff'};
   }
   @media (max-width: 640px) {
-    color: #fff;
+    color: ${props => props.light === 'true' ? '#000' : '#fff'};
   }
 `;
 const Lang = css(Github)`
@@ -86,7 +88,7 @@ const MobileNav = css.ul`
   list-style: none;
   position: absolute;
   top: 60px;
-  // right: ${props => props.active ? 0 : -100}px;
+  z-index: 99;
   ${props => props.active ? 'right: 0;' : 'display: none;'}
   width: 100px;
   transition: all 0.3s ease-out;
@@ -95,10 +97,10 @@ const MobileNavItem = css.li`
   font-size: 13px;
   line-height: 30px;
   height: 30px;
-  background-color: #000;
+  background-color: ${props => props.light === 'true' ? '#fff' : '#000'};
   cursor: pointer;
   a{
-    color: #fff;
+    color: ${props => props.light === 'true' ? '#000' : '#fff'};
     display: block;
     padding: 0 10px;
     &:hover{
@@ -119,24 +121,24 @@ const MobileMenuToggle = css.span`
   height: 60px;
   vertical-align: top;
   margin-left: 15px;
-  background: url(${img_m_menu}) center / 100% no-repeat;
+  background: url(${props => props.light === 'true' ? img_m_menu_light : img_m_menu}) center / 100% no-repeat;
   @media (min-width: 640px) {
     display: none;
   }
 `;
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, light }) => {
 
   const [menuStatus, toggleMobileMenu] = useState(false);
 
   return (
-    <Wrap>
+    <Wrap light={light ? 'true' : 'false'}>
       <Cont className="clearfix">
-        <Logo to="/" />
+        <Logo light={light ? 'true' : 'false'} to="/" />
         <Nav>
           {
             _conf.nav.map((item, index) => (
-              <NavItem key={index}>
+              <NavItem light={light ? 'true' : 'false'} key={index}>
                 {
                   /^http/.test(item.href) ?
                     <a target="_blank" href={item.href}>{item.name}</a>
@@ -146,10 +148,10 @@ const Header = ({ siteTitle }) => {
             ))
           }
         </Nav>
-        <MobileNav active={menuStatus}>
+        <MobileNav light={light ? 'true' : 'false'} active={menuStatus}>
           {
             _conf.nav.map((item, index) => (
-              <MobileNavItem key={index}>
+              <MobileNavItem light={light ? 'true' : 'false'} key={index}>
                 {
                   /^http/.test(item.href) ?
                     <a target="_blank" href={item.href}>{item.name}</a>
@@ -160,9 +162,9 @@ const Header = ({ siteTitle }) => {
           }
         </MobileNav>
         <Toolbar>
-          <Github target="_blank" href="https://github.com/Bytom/bytom" className="iconfont github" />
+          <Github light={light ? 'true' : 'false'} target="_blank" href="https://github.com/Bytom/bytom" className="iconfont github" />
           {/* <Lang className="iconfont lang" /> */}
-          <MobileMenuToggle onClick={() => toggleMobileMenu(!menuStatus)} />
+          <MobileMenuToggle light={light ? 'true' : 'false'} onClick={() => toggleMobileMenu(!menuStatus)} />
         </Toolbar>
       </Cont>
     </Wrap>

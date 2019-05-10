@@ -12,9 +12,9 @@ const Wrap = css.div`
   width: 100%;
 `;
 
-const Layout = ({ children }) => (
+const Layout = ({ children, light = false }) => (
   <>
-    <Header />
+    <Header light={light} />
     <Wrap>
       {children}
     </Wrap>
