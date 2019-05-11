@@ -11,6 +11,10 @@ export default {
       href: '/dev/',
     },
     {
+      name: 'Bystack',
+      href: 'https://www.bystack.io/',
+    },
+    {
       name: 'Ecosystem',
       href: '/ecosystem/',
     },
