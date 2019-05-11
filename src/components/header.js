@@ -7,6 +7,7 @@ import img_logo from '../images/logo.png';
 import img_logo_light from '../images/logo_light.png';
 import img_m_menu from '../images/m.menu.png';
 import img_m_menu_light from '../images/m.menu.light.png';
+import img_devcon from '../images/devcon/btn.png';
 
 const Wrap = css.div`
   width: 100%;
@@ -43,7 +44,7 @@ const Nav = css.ul`
     display: none;
   }
 `;
-const NavItem = css.ul`
+const NavItem = css.li`
   float: left;
   font-size: 16px;
   padding: 0 20px;
@@ -126,6 +127,24 @@ const MobileMenuToggle = css.span`
     display: none;
   }
 `;
+const DevCon = css.div`
+  width: 106px;
+  height: 38px;
+  float: right;
+  margin: 20px 300px 0 0;
+  background: url(${img_devcon}) center / 100% no-repeat;
+  a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+  }
+  @media (max-width: 640px) {
+    display: none;
+  }
+`;
 
 const Header = ({ siteTitle, light }) => {
 
@@ -163,12 +182,16 @@ const Header = ({ siteTitle, light }) => {
           <MobileNavItem light={light ? 'true' : 'false'} key={'10'}>
             <Link activeClassName="active" to='/team'>Team</Link>
           </MobileNavItem>
+          <MobileNavItem light={light ? 'true' : 'false'} key={'11'}>
+            <a target="_blank" href="https://devcon.bytom.io">DevCon2</a>
+          </MobileNavItem>
         </MobileNav>
         <Toolbar>
           <Github light={light ? 'true' : 'false'} target="_blank" href="https://github.com/Bytom/bytom" className="iconfont github" />
           {/* <Lang className="iconfont lang" /> */}
           <MobileMenuToggle light={light ? 'true' : 'false'} onClick={() => toggleMobileMenu(!menuStatus)} />
         </Toolbar>
+        <DevCon><a target="_blank" href="https://devcon.bytom.io">DevCon2</a></DevCon>
       </Cont>
     </Wrap>
   );
