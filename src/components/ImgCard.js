@@ -71,14 +71,16 @@ const Cont = css.div`
   }
 `;
 
-export default function ImgCard({ title, img, des }) {
+export default function ImgCard({ title, img, des, link }) {
   return (
     <Wrap>
-      <img src={img} alt=""/>
-      <Cont>
-        <h1>{title}</h1>
-        <p>{des}</p>
-      </Cont>
+      <a href={link} target="_blank">
+        <img src={img} alt={title}/>
+        <Cont>
+          <h1>{title}</h1>
+          <p title={des}>{des}</p>
+        </Cont>
+      </a>
     </Wrap>
   )
 }
