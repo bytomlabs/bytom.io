@@ -131,7 +131,7 @@ const DevCon = css.div`
   width: 106px;
   height: 38px;
   float: right;
-  margin: 20px 300px 0 0;
+  margin: 20px 220px 0 0;
   background: url(${img_devcon}) center / 100% no-repeat;
   a{
     display: block;

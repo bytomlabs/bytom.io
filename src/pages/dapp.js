@@ -7,8 +7,8 @@ import _conf from '../conf/dapp.conf';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Banner from '../components/Banner';
-import Card from '../components/Card';
 import ImgCard from '../components/ImgCard';
+import Follows from '../components/Follows';
 
 import img_banner_bg from '../images/bgv.png';
 
@@ -28,32 +28,27 @@ const Cont = css.div`
 `;
 const BannerWrap = css.div`
   display: flex;
-  padding: 145px 0;
+  padding: 160px 0;
   justify-content: space-between;
   align-items: center;
   div:first-child{
     color: #fff;
     flex: 1;
-    h1{
-      font-size: 54px;
-      font-weight: bold;
-      line-height: 1em;
-    }
     p{
       margin-top: 30px;
-      font-size: 20px;
+      font-size: 24px;
+      color: #fff;
+      line-height: 50px;
+      text-align: center;
       font-weight: 300;
-      line-height: 32px;
-      color: #B3B3B3;
+      margin-bottom: 20px;
     }
   }
   @media (max-width: 640px) {
-    padding: 100px 16px;
+    padding: 50px 16px;
     text-align: center;
-    h1{
-      font-size: 32px !important;
-    }
     p{
+      line-height: 26px !important;
       font-size: 14px !important;
     }
   }
@@ -144,6 +139,10 @@ const MobileCardWrap = css.div`
     flex: 1;
   }
 `;
+const Follow = css.div`
+  width: 300px;
+  margin: 0 auto;
+`;
 
 const Document = () => (
   <DocumentBanner>
@@ -172,8 +171,8 @@ const DevPage = ({ location }) => (
       <Cont>
         <BannerWrap>
           <div>
-            <h1></h1>
-            <p></p>
+            <p>All the applications come from the community,<br/>welcome to develop your own applications on Bytom.</p>
+            <Follow><Follows size={32} /></Follow>
           </div>
         </BannerWrap>
       </Cont>

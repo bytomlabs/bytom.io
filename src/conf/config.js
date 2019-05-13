@@ -23,6 +23,10 @@ export default {
       href: '/wallet/',
     },
     {
+      name: 'DApp',
+      href: '/dapp/',
+    },
+    {
       name: 'Explorer',
       href: 'https://blockmeta.com',
     },
