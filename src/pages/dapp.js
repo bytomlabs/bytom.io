@@ -166,7 +166,7 @@ const MobileCard = ({title, img, link, des, exrta}) => (
 
 const DevPage = ({ location }) => (
   <Layout>
-    <SEO title="Developer" />
+    <SEO title="DApp" />
     <Banner>
       <Cont>
         <BannerWrap>
