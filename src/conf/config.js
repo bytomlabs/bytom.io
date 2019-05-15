@@ -10,10 +10,10 @@ export default {
       name: 'Developer',
       href: '/dev/',
     },
-    // {
-    //   name: 'Bystack',
-    //   href: 'https://www.bystack.io/',
-    // },
+    {
+      name: 'Bystack',
+      href: 'https://www.bystack.io/',
+    },
     {
       name: 'Ecosystem',
       href: '/ecosystem/',
