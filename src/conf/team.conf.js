@@ -38,7 +38,7 @@ export default {
     [
       {
         name: 'Chang Jia',
-        position: 'Founder of 8btc',
+        position: 'Founder of Bytom',
         img: img_changj,
         contact: [
           {type: 'linkedin', link: 'https://www.linkedin.com/in/%E5%BF%97%E9%B9%8F-%E5%88%98-750b8395/'},
