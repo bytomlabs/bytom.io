@@ -175,15 +175,15 @@ export default {
       },
     ],
     [
-      {
-        name: 'Du Chao',
-        position: 'Marketing Director',
-        img: img_duc,
-        contact: [
-          {type: 'linkin', link: 'https://www.linkedin.com/in/chao-du-304a92b2'},
-          {type: 'email', link: 'duc@bytom.io'},
-        ],
-      },
+      // {
+      //   name: 'Du Chao',
+      //   position: 'Marketing Director',
+      //   img: img_duc,
+      //   contact: [
+      //     {type: 'linkin', link: 'https://www.linkedin.com/in/chao-du-304a92b2'},
+      //     {type: 'email', link: 'duc@bytom.io'},
+      //   ],
+      // },
       {
         name: 'Ma Qianli',
         position: 'Operation Director',
@@ -282,6 +282,7 @@ export default {
           {type: 'email', link: 'xn2018@bytom.io'},
         ],
       },
+      {},
     ],
   ],
 }
