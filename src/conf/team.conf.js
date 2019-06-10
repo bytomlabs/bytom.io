@@ -53,6 +53,10 @@ export default {
           {type: 'email', link: 'duan@bytom.io'},
         ],
       },
+      {},
+      {},
+    ],
+    [
       {
         name: 'Lang Yu',
         position: 'CTO of Bytom',
@@ -71,27 +75,6 @@ export default {
           {type: 'email', link: 'jinl@8btc.com'},
         ],
       },
-      {
-        name: 'Qu Zhaoxiang',
-        position: 'COO of Bytom',
-        img: img_quzx,
-        contact: [
-          {type: 'twitter', link: 'https://twitter.com/He1l_Q'},
-          {type: 'email', link: 'q@bytom.io'},
-        ],
-      },
-      {
-        name: 'Li Zongcheng',
-        position: 'CFO of Bytom',
-        img: img_lizc,
-        contact: [
-          {type: 'email', link: 'lizc@8btc.com'},
-        ],
-      },
-      {},
-      {},
-    ],
-    [
       {
         name: 'Zhu Yiqi',
         position: 'VP Engineering',
@@ -173,6 +156,7 @@ export default {
           // {type: 'email', link: ''},
         ],
       },
+      {}
     ],
     [
       // {
@@ -184,6 +168,23 @@ export default {
       //     {type: 'email', link: 'duc@bytom.io'},
       //   ],
       // },
+      {
+        name: 'Qu Zhaoxiang',
+        position: 'COO of Bytom',
+        img: img_quzx,
+        contact: [
+          {type: 'twitter', link: 'https://twitter.com/He1l_Q'},
+          {type: 'email', link: 'q@bytom.io'},
+        ],
+      },
+      {
+        name: 'Li Zongcheng',
+        position: 'CFO of Bytom',
+        img: img_lizc,
+        contact: [
+          {type: 'email', link: 'lizc@8btc.com'},
+        ],
+      },
       {
         name: 'Ma Qianli',
         position: 'Operation Director',

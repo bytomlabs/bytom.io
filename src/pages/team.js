@@ -175,7 +175,7 @@ export default function Team() {
                           {block.img && <img src={block.img} alt=""/>}
                           {block.name && <Name>{block.name}</Name>}
                           {block.position && <p>{block.position}</p>}
-                          <ul>
+                          {/* <ul>
                             {
                               block.contact && block.contact.map((network, networkIndex) => (
                                 <li key={networkIndex}>
@@ -187,9 +187,7 @@ export default function Team() {
                                 </li>
                               ))
                             }
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                          </ul>
+                          </ul> */}
                         </li>
                       ))
                     }
