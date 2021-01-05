@@ -5,7 +5,7 @@
   "version": "1.0.2",
   "author": "@bytom",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.10.0",
     "core-js": "2.x",
     "date-fns": "^1.30.1",
